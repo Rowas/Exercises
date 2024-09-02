@@ -158,3 +158,60 @@ static void Exercise7()
 }
 Exercise7();
 */
+
+//
+static void Exercise8()
+{
+    int boxHeight = 1;
+    int boxWidth = 1;
+    int printHeight = 1;
+    Console.WriteLine("Enter height of box");
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out boxHeight))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, enter an integer.");
+        }
+    }
+    Console.WriteLine("Enter width of box");
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out boxWidth))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, enter an integer.");
+        }
+    }
+    while (true)
+    {
+        for (int i = 0; i < boxWidth; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.Write("X");
+            }
+            else
+            {
+                Console.Write("O");
+            }
+        }
+        if (printHeight == boxHeight)
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("");
+            printHeight++;
+        }
+        
+    }
+}
+Exercise8();
