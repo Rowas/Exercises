@@ -373,3 +373,55 @@ static void Exercise11()
 }
 Exercise11();
 */
+
+
+//9 number pyramids, 1 through 9
+static void Exercise12()
+{
+    int startValue = 1;
+    int endValue = 2;
+    do
+    {
+        for (int i = startValue; i < endValue; i++)
+        {
+            Console.Write(i);
+        }
+        endValue++;
+        Console.WriteLine("");
+    } while (endValue <= 10);
+}
+Exercise12();
+
+
+/*
+//Number of primes up to a user requested amount
+static void Exercise13()
+{
+    Console.WriteLine("Enter the wished for number of primes to show:");
+
+    int primeNumber = 0;
+    decimal checkedNum = 2;
+
+    decimal RequestPrimes = Convert.ToDecimal(Console.ReadLine());
+
+    do
+    {
+        bool isPrime = true;
+        for (decimal i = 2; i < checkedNum; i++)
+        {
+            if (checkedNum % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime)
+        {
+            primeNumber++;
+            Console.WriteLine($"Prime number {primeNumber} is {checkedNum}");
+        }
+        checkedNum++;
+    } while (primeNumber != RequestPrimes);
+}
+Exercise13();
+*/
