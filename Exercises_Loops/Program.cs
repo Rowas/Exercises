@@ -218,6 +218,7 @@ static void Exercise8()
 Exercise8();
 */
 
+/*
 //Checkered box to user spec size
 static void Exercise9()
 {
@@ -288,3 +289,68 @@ static void Exercise9()
     }
 }
 Exercise9();
+*/
+
+/*
+//Hollowed box to user spec size
+static void Exercise10()
+{
+    int boxHeight = 1;
+    int boxWidth = 1;
+    int printHeight = 1;
+    Console.WriteLine("Enter height of box");
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out boxHeight))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, enter an integer.");
+        }
+    }
+    Console.WriteLine("Enter width of box");
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out boxWidth))
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, enter an integer.");
+        }
+    }
+    while (true)
+    {
+        for (int i = 0; i < boxWidth-1; i++)
+        {
+            if (printHeight == 1 || printHeight == boxHeight)
+            {
+                Console.Write("X");
+            }
+            else if (printHeight > 1 && i == 0)
+            {
+                Console.Write("X");
+            }
+            else if (i < boxWidth-1)
+            {
+                Console.Write(" ");
+            }
+        }
+        if (printHeight == boxHeight)
+        {
+            Console.WriteLine("X");
+            break;
+        }
+        else
+        {
+            Console.WriteLine("X");
+            printHeight++;
+        }
+
+    }
+}
+Exercise10();
+*/
