@@ -143,3 +143,84 @@ static void Exercise7()
 }
 Exercise7();
 */
+
+/*
+//delayed print, not enough until 10 words, then print 10 words ago
+static void Exercise8()
+{
+
+}
+Exercise8();
+*/
+
+/*
+//Word pyramid
+static void Exercise9()
+{
+    string defString = "Hello World";
+    for (int i = 0; i < defString.Length; i++)
+    {
+        string printString = defString.Substring(0, i + 1);
+        Console.WriteLine(printString);
+    }
+}
+Exercise9();
+*/
+
+/*
+//Colored letters, user defined string and char
+static void Exercise10()
+{
+    Console.WriteLine("Enter a string: ");
+    string reqString = Console.ReadLine();
+
+    Console.WriteLine("Pick a char to highlight: ");
+    char pickedChar = Convert.ToChar(Console.Read());
+
+    for (int i = 0; i < reqString.Length; i++)
+    {
+        if (reqString[i] == pickedChar)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+        }
+        Console.Write(reqString[i]);
+    }
+    Console.ForegroundColor = ConsoleColor.Gray;
+}
+Exercise10();
+*/
+
+/*
+//User defined string and start & stop of coloring
+static void Exercise11()
+{
+    Console.WriteLine("Enter a sentence: ");
+    string reqSentence = Console.ReadLine();
+
+    Console.WriteLine("Pick a start point (number): ");
+    int startNum = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Pick a start point (number): ");
+    int stopNum = Convert.ToInt32(Console.ReadLine());
+
+    for (int i = 0; i < reqSentence.Length; i++)
+    {
+        if (i < startNum - 1 || i > stopNum - 1)
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(reqSentence[i]);
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(reqSentence[i]);
+        }
+    }
+    Console.ForegroundColor = ConsoleColor.Gray;
+}
+Exercise11();
+*/
