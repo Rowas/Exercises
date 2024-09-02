@@ -374,7 +374,7 @@ static void Exercise11()
 Exercise11();
 */
 
-
+/*
 //9 number pyramids, 1 through 9
 static void Exercise12()
 {
@@ -391,7 +391,7 @@ static void Exercise12()
     } while (endValue <= 10);
 }
 Exercise12();
-
+*/
 
 /*
 //Number of primes up to a user requested amount
