@@ -9,6 +9,7 @@ static void Exercise1()
     string userName = Console.ReadLine();
     Console.WriteLine("Excellent! Nice to meet you " + userName);
 }
+Exercise1();
 */
 
 /*
@@ -30,6 +31,7 @@ static void Excercies2()
     Console.WriteLine("The result of the multiplication is: ");
     Console.WriteLine(number1 * number2);
 }
+Exercise2();
 */
 
 /*
@@ -75,6 +77,7 @@ static void Exercise3()
         }
     }
 }
+Exercise3();
 */
 
 /*
@@ -100,6 +103,7 @@ static void Exercise4()
             break;
     }
 }
+Exercise4();
 */
 
 /*
@@ -117,6 +121,7 @@ static void Exercise5()
     Console.WriteLine("The number that is twice as much: " + evalNumber * 2);
     Console.WriteLine("The number that is half as much: " + evalNumber / 2);
 }
+Exercise5();
 */
 
 /*
@@ -125,6 +130,7 @@ static void Exercise6()
 {
 
 }
+Exercise6();
 */
 
 /*
@@ -151,6 +157,7 @@ while (true)
         break;
     }
 }
+Exercise7();
 */
 
 
