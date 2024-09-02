@@ -1,6 +1,6 @@
 ﻿/*
 //integers 20 to 30
-static void exercise1()
+static void Exercise1()
 {
     int numberLow = 20;
     int numberHigh = 30;
@@ -9,4 +9,21 @@ static void exercise1()
         Console.WriteLine(i);
     }
 }
-exercise1();
+Exercise1();
+*/
+
+/*
+//Even number up to 30
+static void Exercise2()
+{
+    int numberEnd = 30;
+    for (int i = 0; i <= numberEnd; i++)
+    {
+        if (i % 2 == 0)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+Exercise2();
+*/
