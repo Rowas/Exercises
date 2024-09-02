@@ -425,3 +425,21 @@ static void Exercise13()
 }
 Exercise13();
 */
+
+/*
+//Game - Guess the number
+static void Exercise14()
+{
+    
+}
+Exercise14();
+*/
+
+/*
+//Rock, Paper, Scissors
+static void Exercise15()
+{
+    
+}
+Exercise15();
+*/
