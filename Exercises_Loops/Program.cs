@@ -27,3 +27,23 @@ static void Exercise2()
 }
 Exercise2();
 */
+
+/*
+//Every third "Hey"
+static void Exercise3()
+{
+    int numberEnd = 30;
+    for (int i = 0; i <= numberEnd; i++)
+    {
+        if (i % 3 == 0)
+        {
+            Console.WriteLine("Hey");
+        }
+        else
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+Exercise3();
+*/
