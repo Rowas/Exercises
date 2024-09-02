@@ -73,3 +73,18 @@ static void Exercise4()
 }
 Exercise4();
 */
+
+/*
+//Sum of numbers from 1 to 1000
+static void Exercise5()
+{
+    int endNum = 1000;
+    int sumNum = 0;
+    for (int i = 1; i <= endNum; i++)
+    {
+        sumNum = sumNum+i;
+    }
+    Console.WriteLine($"Sum of all numbers from 1 to 1000 is {sumNum}");
+}
+Exercise5();
+*/
