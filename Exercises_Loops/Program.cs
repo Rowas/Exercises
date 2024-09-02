@@ -354,3 +354,22 @@ static void Exercise10()
 }
 Exercise10();
 */
+
+/*
+//Number pyramid, 1 through 9
+static void Exercise11()
+{
+    int startValue = 1;
+    int endValue = 2;
+    do
+    {
+        for (int i = startValue; i < endValue; i++)
+        {
+            Console.Write(i);
+        }
+        endValue++;
+        Console.WriteLine("");
+    } while (endValue <= 10);
+}
+Exercise11();
+*/
