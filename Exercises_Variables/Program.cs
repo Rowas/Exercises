@@ -121,7 +121,7 @@ static void Exercise5()
 
 /*
 //Calculator
-static void Calculator()
+static void Exercise6()
 {
 
 }
