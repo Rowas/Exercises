@@ -25,3 +25,25 @@ static void Exercise2()
 }
 Exercise2();
 */
+
+/*
+//Print user string in reverse
+static void Exercis3()
+{
+    Console.WriteLine("Enter string to print backwards: ");
+    string reqWord = Console.ReadLine();
+
+    string[] reqWordRev = new string[reqWord.Length];
+
+    int i = reqWord.Length;
+
+    i--;
+
+    foreach (char c in reqWord)
+    {
+        Console.Write(reqWord[i]);
+        i--;
+    }
+}
+Exercise3();
+*/
