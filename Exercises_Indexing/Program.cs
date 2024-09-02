@@ -90,3 +90,38 @@ static void Exercise4()
 }
 Exercise4();
 */
+
+/*
+//Request string from User, check if string is an palindrome
+static void Exercise5()
+{
+    Console.WriteLine("Enter string to test if a palindrome: ");
+    string reqWord = Console.ReadLine();
+
+    char[] wordReversed = new char[reqWord.Length];
+
+    int i = reqWord.Length;
+
+    i--;
+
+    foreach (char c in reqWord)
+    {
+        wordReversed[i] = c;
+        i--;
+    }
+    string printString = new string(wordReversed);
+
+    string testWord1 = reqWord.ToLower();
+    string testWord2 = printString.ToLower();
+
+    if (testWord1 == testWord2)
+    {
+        Console.WriteLine($"{reqWord} is a palindrome.");
+    }
+    else
+    {
+        Console.WriteLine($"{reqWord} is not a palindrome.");
+    }
+}
+Exercise5();
+*/
