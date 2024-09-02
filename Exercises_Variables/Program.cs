@@ -137,7 +137,7 @@ Exercise6();
 //Sum and Average
 static void Exercise7()
 {
-    double parsedValue = 0.0;
+double parsedValue = 0.0;
 double sumNumber = 0.0;
 int enteredNum = 0;
 

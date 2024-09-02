@@ -47,3 +47,29 @@ static void Exercise3()
 }
 Exercise3();
 */
+
+/*
+//Multiplication table
+static void Exercise4()
+{
+    int userNum = 0;
+    Console.WriteLine("Enter an integer for it's multiplication table (up to 10):");
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out userNum))
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{userNum} times {i} equals {userNum * i}");
+            }
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, enter an integer.");
+        }
+    }
+
+}
+Exercise4();
+*/
