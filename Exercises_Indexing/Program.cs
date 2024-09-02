@@ -47,3 +47,46 @@ static void Exercis3()
 }
 Exercise3();
 */
+
+/*
+//Hide vowels, User defined string, in Swedish
+static void Exercise4()
+{
+    Console.WriteLine("Enter string to print without swedish vowels: ");
+    string reqWord = Console.ReadLine();
+
+    char[] vowels = new char[18] { 'A', 'E', 'I', 'O', 'U', 'Y', 'Å', 'Ä', 'Ö', 'a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö' };
+
+    char[] hiddenVowels = new char[reqWord.Length];
+
+    int x = 0;
+
+    foreach (char c in reqWord)
+    {
+        hiddenVowels[x++] = c;
+    }
+    while (true)
+    {
+        for (int i = 0; i < hiddenVowels.Length; i++)
+        {
+            for (int j = 0; j < vowels.Length; j++)
+            {
+                if (hiddenVowels[i] == vowels[j])
+                    hiddenVowels[i] = '*';
+            }
+            
+        }
+        if (x == hiddenVowels.Length)
+        {
+            break;
+        }
+        else
+        {
+            x++;
+        }
+    }
+    string printString = new string(hiddenVowels);
+    Console.WriteLine(printString);
+}
+Exercise4();
+*/
