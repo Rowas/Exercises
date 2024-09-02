@@ -125,3 +125,21 @@ static void Exercise5()
 }
 Exercise5();
 */
+
+/*
+//Single line calculator
+static void Exercise6()
+{
+
+}
+Exercise6();
+*/
+
+/*
+//7 words, user specified, printed reversed order
+static void Exercise7()
+{
+
+}
+Exercise7();
+*/
