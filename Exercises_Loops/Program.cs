@@ -88,3 +88,23 @@ static void Exercise5()
 }
 Exercise5();
 */
+
+/*
+//Rice on a chessboard
+static void Exercise6()
+{
+    Console.WriteLine("Rice on a chess board.");
+
+    decimal rice = 1;
+    int square = 1;
+
+    for (int i = 0; i < 64; i++)
+    {
+        Console.WriteLine($"Rice on square {square} is {rice}");
+        rice = Convert.ToDecimal(Math.Pow(2, square));
+        square++;
+    }
+}
+Exercise6();
+*/
+
