@@ -224,3 +224,12 @@ static void Exercise11()
 }
 Exercise11();
 */
+
+/*
+//Color shifting in user defined string between instances of chars
+static void Exercise12()
+{
+
+}
+Exercise12();
+*/
