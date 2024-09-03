@@ -139,7 +139,23 @@ Exercise6();
 //7 words, user specified, printed reversed order
 static void Exercise7()
 {
+    List<string> userStrings = new List<string>();
+    Console.WriteLine("Enter 7 strings in total (one per line) and have them printed in reverse order. ");
+    for (int i = 0; i < 7; i++)
+    {
+        string stringEntered = Console.ReadLine();
+        userStrings.Add(stringEntered);
+    }
 
+    userStrings.Reverse();
+
+    Console.Clear();
+
+    Console.WriteLine("Printing words in reverse: ");
+    foreach (string strings in userStrings)
+    {
+        Console.WriteLine(strings);
+    }
 }
 Exercise7();
 */
