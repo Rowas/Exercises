@@ -112,3 +112,22 @@ static void Exercise6()
 }
 Exercise6();
 */
+
+/*
+//Take int[] and return average as double
+static void Exercise7()
+{
+    static double intArr(params int[] numbers)
+    {
+        double average = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            average = average + numbers[i];
+        }
+        average = average / numbers.Length;
+        return average;
+    }
+    Console.WriteLine($"The average is: {intArr(1, 2, 3)}");
+}
+Exercise7();
+*/
