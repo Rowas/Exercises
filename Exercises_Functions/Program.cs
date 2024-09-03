@@ -78,3 +78,37 @@ static void Exercise5()
 }
 Exercise5();
 */
+
+/*
+//Own version of string.join()
+using System.Text.Json;
+
+static void Exercise6()
+{
+    static string MyJoin(string seperator, params string[] elements)
+    {
+        int j = 0;
+        string[] joinedElements = new string[elements.Length * 2];
+        for (int i = 0; i < joinedElements.Length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                joinedElements[i] = elements[j];
+                j++;
+            }
+            else if (j == elements.Length)
+            {
+                break;
+            }
+            else
+            {
+                joinedElements[i] = seperator;
+            }
+        }
+        string returnElements = String.Concat(joinedElements);
+        return returnElements;
+    }
+    Console.WriteLine(MyJoin("->", "Sweden", "Finland", "Norway"));
+}
+Exercise6();
+*/
