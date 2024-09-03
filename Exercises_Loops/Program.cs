@@ -443,7 +443,36 @@ Exercise13();
 //Game - Guess the number
 static void Exercise14()
 {
-    
+    var randNum = new Random();
+    int correctGuess = randNum.Next(101);
+    var guess = 0;
+
+    while (guess != correctGuess)
+    {
+        Console.Write("Guess a number between 1 and 100: ");
+        while (true)
+        {
+            if (int.TryParse(Console.ReadLine(), out guess))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, enter an integer.");
+            }
+        }
+        if (guess > correctGuess)
+        {
+            Console.WriteLine("Wrong, too high, try again.");
+        }
+        else if (guess < correctGuess)
+        {
+            Console.WriteLine("Wrong, too low, try again.");
+        }
+
+    }
+    Console.WriteLine("");
+    Console.WriteLine("You guessed correct!");
 }
 Exercise14();
 */
