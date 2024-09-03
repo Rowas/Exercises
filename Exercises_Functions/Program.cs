@@ -37,6 +37,23 @@ static void Exercise3()
         return false;
     }
     StringCheck("Try this string for size", 20);
+    Console.WriteLine($"Is the string longer than the integer: {StringCheck("Try this string for size", 20)}");
 }
 Exercise3();
+*/
+
+/*
+//Convert C to F
+static void Exercise4()
+{
+    static double convertC(double celsius)
+    {
+        double fahrenheit = 9.0 / 5.0 * celsius + 32.0;
+        return fahrenheit;
+    }
+
+    Console.WriteLine("Provide a temperature in Celsius: ");
+    Console.WriteLine($"The provided temperature is {convertC(Double.Parse(Console.ReadLine()))} F");
+}
+Exercise4();
 */
