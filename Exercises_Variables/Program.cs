@@ -124,14 +124,40 @@ static void Exercise5()
 Exercise5();
 */
 
-/*
+
 //Calculator
 static void Exercise6()
 {
-
+    double firstNumber = 0;
+    double secondNumber = 0;
+    string mOperator = "";
+    Console.Write("Enter first number: ");
+    firstNumber = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Enter second number: ");
+    secondNumber = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Enter operator ( +, -, /, * ): ");
+    mOperator = Console.ReadLine();
+    switch (mOperator)
+    {
+        case "+":
+            Console.WriteLine($"Addition of chosen numbers: {firstNumber + secondNumber}");
+            break;
+        case "-":
+            Console.WriteLine($"Substraction of chosen numbers: {firstNumber - secondNumber}");
+            break;
+        case "*":
+            Console.WriteLine($"Multiplication of chosen numbers: {firstNumber * secondNumber}");
+            break;
+        case "/":
+            Console.WriteLine($"Division of chosen numbers: {firstNumber / secondNumber}");
+            break;
+        default:
+            Console.WriteLine("No operator chosen, ending program.");
+            break;
+    }
 }
 Exercise6();
-*/
+
 
 /*
 //Sum and Average
