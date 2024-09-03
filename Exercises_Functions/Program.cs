@@ -57,3 +57,24 @@ static void Exercise4()
 }
 Exercise4();
 */
+
+/*
+//Add - between every letter of a string
+static void Exercise5()
+{
+    static string bindestreck(string namn)
+    {
+        int j = 0;
+        string[] nyttNamn = new string[namn.Length];
+        foreach (char c in namn)
+        {
+            nyttNamn[j] = Convert.ToString(c);
+            j++;
+        }
+        string ReturnNamn = string.Join("-", nyttNamn);
+        return ReturnNamn;
+    }
+    Console.WriteLine(bindestreck("Fredrik"));
+}
+Exercise5();
+*/
