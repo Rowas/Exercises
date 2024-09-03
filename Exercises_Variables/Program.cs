@@ -124,7 +124,7 @@ static void Exercise5()
 Exercise5();
 */
 
-
+/*
 //Calculator
 static void Exercise6()
 {
@@ -133,10 +133,10 @@ static void Exercise6()
     string mOperator = "";
     Console.Write("Enter first number: ");
     firstNumber = Convert.ToDouble(Console.ReadLine());
-    Console.Write("Enter second number: ");
-    secondNumber = Convert.ToDouble(Console.ReadLine());
     Console.Write("Enter operator ( +, -, /, * ): ");
     mOperator = Console.ReadLine();
+    Console.Write("Enter second number: ");
+    secondNumber = Convert.ToDouble(Console.ReadLine());
     switch (mOperator)
     {
         case "+":
@@ -157,7 +157,7 @@ static void Exercise6()
     }
 }
 Exercise6();
-
+*/
 
 /*
 //Sum and Average
