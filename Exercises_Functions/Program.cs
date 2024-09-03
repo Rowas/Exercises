@@ -25,3 +25,18 @@ static void Exercise2()
 Exercise2();
 */
 
+/*
+static void Exercise3()
+{
+    static bool StringCheck(string compString = "", int compNum = 0)
+    {
+        if (compString.Length > compNum)
+        { 
+            return true; 
+        }
+        return false;
+    }
+    StringCheck("Try this string for size", 20);
+}
+Exercise3();
+*/
