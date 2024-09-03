@@ -378,17 +378,30 @@ Exercise11();
 //9 number pyramids, 1 through 9
 static void Exercise12()
 {
-    int startValue = 1;
-    int endValue = 2;
-    do
+    int innerLoop = 2;
+    int outerLoop = 1;
+    while (innerLoop <= 10)
     {
-        for (int i = startValue; i < endValue; i++)
+        innerLoop = 2;
+        for (int j = 1; j <= outerLoop; j++)
         {
-            Console.Write(i);
+            for (int i = 1; i < innerLoop; i++)
+            {
+                if (i == innerLoop)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.Write(i);
+                }
+            }
+            Console.WriteLine("");
+            innerLoop++;
         }
-        endValue++;
         Console.WriteLine("");
-    } while (endValue <= 10);
+        outerLoop++;
+    }
 }
 Exercise12();
 */
