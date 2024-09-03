@@ -481,7 +481,30 @@ Exercise14();
 //Rock, Paper, Scissors
 static void Exercise15()
 {
-    
+    var randChoice = new Random();
+    string[] options = new string[3] { "Rock", "Paper", "Scissors" };
+    int playerChoice = 0;
+    string cpuChoice;
+    while (true)
+    {
+        int r = randChoice.Next(options.Length);
+        Console.WriteLine("Pick a choice: ");
+        Console.WriteLine("0: Rock");
+        Console.WriteLine("1: Paper");
+        Console.WriteLine("2: Scissors");
+        while (true)
+        {
+            if (int.TryParse(Console.ReadLine(), out playerChoice))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, enter a valid option.");
+            }
+        }
+        
+    }
 }
 Exercise15();
 */
