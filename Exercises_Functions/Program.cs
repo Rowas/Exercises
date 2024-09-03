@@ -10,3 +10,18 @@ static void Exercise1()
 }
 Exercise1();
 */
+
+//Add first and last name together, return result
+
+/*
+static void Exercise2()
+{
+    static string FullName(string fName = "", string lName = "")
+    {
+        return $"{fName} {lName}";
+    }
+    Console.WriteLine(FullName("Andreas", "Andersson"));
+}
+Exercise2();
+*/
+
