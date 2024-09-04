@@ -79,6 +79,7 @@ static void Exercise5()
 Exercise5();
 */
 
+
 /*
 //Own version of string.join()
 using System.Text.Json;
@@ -130,4 +131,95 @@ static void Exercise7()
     Console.WriteLine($"The average is: {intArr(1, 2, 3)}");
 }
 Exercise7();
+*/
+
+/*
+//Translate int number to string number on user request
+static void Exercise8()
+{
+    static string[] NumberToWords()
+    {
+        Console.WriteLine("Provide some numbers: ");
+        string requestedNumbers = Console.ReadLine();
+
+        string[] numberList = new string[10] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+
+        int[] results = new int[requestedNumbers.Length];
+
+        string[] returnResults = new string[requestedNumbers.Length];
+
+        int x = 0;
+
+        foreach (char c in requestedNumbers)
+        {
+            results[x] = (int)char.GetNumericValue(c);
+            x++;
+        }
+
+        for (int i = 0; i < requestedNumbers.Length; i++)
+        {
+            returnResults[i] = numberList[results[i]];
+        }
+        return returnResults;
+    }
+    Console.WriteLine(NumberToWords());
+}
+Exercise8();
+*/
+
+/*
+//Convert whole number to matching words
+static void Exercise9()
+{
+    
+}
+Exercise9();
+*/
+
+/*
+//Find occurance of 'c' in "Text". 
+static void Exercise10()
+{
+    
+}
+Exercise10();
+*/
+
+/*
+//Dice throwing simulator. 
+using System;
+
+static void Exercise11()
+{
+    static int ThrowDice()
+    {
+        var randNum = new Random();
+        int diceThrow = randNum.Next(7);
+            switch (diceThrow)
+            {
+                case 0:
+                    diceThrow = randNum.Next(7);
+                    break;
+                default:
+                    break;
+            }
+        return diceThrow;
+    }
+    //Console.WriteLine(ThrowDice());
+
+    static void ThrowMultipleDice(int n)
+    {
+        int[] throws = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine(ThrowDice());
+        }
+        return;
+    }
+    Console.WriteLine("Input number of D6 to throw: ");
+    int x = int.Parse(Console.ReadLine());
+    Console.WriteLine("");
+    ThrowMultipleDice(x);
+}
+Exercise11();
 */
