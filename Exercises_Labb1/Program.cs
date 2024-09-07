@@ -118,30 +118,45 @@ for  (int i = 0; i < longString.Length - 1; i++)
 }
 */
 
-/*
+
 //Labb Exercise7
 string longString = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?";
 string shortString = "chuck";
 
-for (int i = 0; i < longString.Length - 4; i++)
+for (int i = 0; i <= longString.Length - shortString.Length; i++)
 {
-    if (longString.Substring(i, 5) == shortString)
+    if (longString.Substring(i, shortString.Length) == shortString)
     {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.Write(longString.Substring(i, 5));
-        i += 4;
+        for (int y = i; y < shortString.Length + i; y++)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(longString.Substring(y, 1));
+        }
+        i += shortString.Length-1;
     }
     else
     {
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.Write(longString[i]);
     }
-    if (i == longString.Length - 5)
+    if (i >= longString.Length - shortString.Length)
     {
-        Console.Write(longString.Substring(i + 1, 4));
+        for (int y = i; y < longString.Length-1; y++)
+        {
+            if (longString.Substring(i, 1).Contains(shortString) == true)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            Console.Write(longString.Substring(y+1, 1));
+        }
     }
 }
-*/
+Console.ForegroundColor = ConsoleColor.Gray;
+
 
 /*
 //Labb Exercise8
