@@ -185,7 +185,7 @@ static void Exercise10()
 Exercise10();
 */
 
-
+/*
 //Dice throwing simulator. 
 using System;
 
@@ -224,6 +224,16 @@ static void Exercise11()
     ThrowMultipleDice(x, y);
 }
 Exercise11();
+*/
 
+/*
+//Draw a box using a function(x, y)
 
+static void Exercise12()
+{
+    static void DrawBox(int width, int height)
+    {
 
+    }
+}
+*/
