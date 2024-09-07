@@ -185,20 +185,20 @@ static void Exercise10()
 Exercise10();
 */
 
-/*
+
 //Dice throwing simulator. 
 using System;
 
 static void Exercise11()
 {
-    static int ThrowDice()
+    static int ThrowDice(int diceSides)
     {
         var randNum = new Random();
-        int diceThrow = randNum.Next(7);
+        int diceThrow = randNum.Next(diceSides+1);
             switch (diceThrow)
             {
                 case 0:
-                    diceThrow = randNum.Next(7);
+                    diceThrow = randNum.Next(diceSides+1);
                     break;
                 default:
                     break;
@@ -207,21 +207,23 @@ static void Exercise11()
     }
     //Console.WriteLine(ThrowDice());
 
-    static void ThrowMultipleDice(int n)
+    static void ThrowMultipleDice(int n, int y)
     {
         int[] throws = new int[n];
         for (int i = 0; i < n; i++)
         {
-            Console.WriteLine(ThrowDice());
+            Console.WriteLine($"Dice nr {i+1} is {ThrowDice(y)}.");
         }
         return;
     }
-    Console.WriteLine("Input number of D6 to throw: ");
+    Console.WriteLine("Input number of dice to throw: ");
     int x = int.Parse(Console.ReadLine());
+    Console.WriteLine("Input number of sides for the dice: ");
+    int y = int.Parse(Console.ReadLine());
     Console.WriteLine("");
-    ThrowMultipleDice(x);
+    ThrowMultipleDice(x, y);
 }
 Exercise11();
-*/
+
 
 
