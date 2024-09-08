@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="D:\Dev\Source\Repos\exercises\Exercises\Exercises_Indexing\Program.cs" Link="Program.cs" />
+    <Compile Include="L:\school-repos\Exercises\Exercises_Indexing\Program.cs" Link="Program.cs" />
   </ItemGroup>
 
 </Project>
