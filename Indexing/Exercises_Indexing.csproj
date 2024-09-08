@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="L:\school-repos\Exercises\Exercises_Indexing\Program.cs" Link="Program.cs" />
-  </ItemGroup>
-
 </Project>
