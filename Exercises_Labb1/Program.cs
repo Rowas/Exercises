@@ -217,6 +217,63 @@ for  (int i = 0; i < printString.Length; i++)
 
 
 //Labb Exercise12
+static void Exercise12()
+{
+    int width = 3;
+    int height = 3;
+    static void DrawBox(int width, int height)
+    {
+        Console.Clear();
+        int y = 0;
+        while (true)
+        {
+            if (y == 0)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    Console.SetCursorPosition(i, y);
+                    Console.Write("#");
+                }
+            }
+            else if (y == height-1)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    Console.SetCursorPosition(i, y);
+                    Console.Write("#");
+                }
+            }
+            else
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    if (i > 0 && i < width-1)
+                    {
+                        Console.SetCursorPosition(i, y);
+                        Console.Write("-");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(i, y);
+                        Console.Write("#");
+                    }
+                }
+            }
+            y++;
+            if (y >= height)
+            {
+                break;
+            }
+        }
+    }
+
+    Console.WriteLine("Enter width of box to draw: ");
+    width = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter height of box to draw: ");
+    height = int.Parse(Console.ReadLine());
+    DrawBox(width, height);
+}
+Exercise12();
 
 /*
 //Labb Exercise13
