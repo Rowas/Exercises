@@ -287,3 +287,123 @@ static void Exercise12()
 }
 Exercise12();
 */
+
+
+//Move @ in a box using function from previous Exercise
+//Hard coding box size of 25x25
+
+static void Exercise13()
+{
+    static void DrawBox(int width, int height)
+    {
+        Console.Clear();
+        int y = 0;
+        while (true)
+        {
+            if (y == 0)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    Console.SetCursorPosition(i, y);
+                    Console.Write("#");
+                }
+            }
+            else if (y == height - 1)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    Console.SetCursorPosition(i, y);
+                    Console.Write("#");
+                }
+            }
+            else
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    if (i > 0 && i < width - 1)
+                    {
+                        Console.SetCursorPosition(i, y);
+                        Console.Write("-");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(i, y);
+                        Console.Write("#");
+                    }
+                }
+            }
+            y++;
+            if (y >= height)
+            {
+                break;
+            }
+        }
+    }
+
+    DrawBox(25, 25);
+
+    ConsoleKeyInfo checkKey;
+
+    Console.SetCursorPosition(12, 12);
+    Console.Write("@");
+    Console.SetCursorPosition(0, 26);
+    Console.WriteLine("Move with arrow-keys on the keyboard. \nPressing Esc will cancel the program.");
+    int x = 12;
+    int y = 12;
+    Console.SetCursorPosition(x, y);
+    Console.CursorVisible = false;
+    do
+    {
+        while (Console.KeyAvailable == false)
+        {
+            Thread.Sleep(25);
+        }
+        checkKey = Console.ReadKey(true);
+        switch (checkKey.Key)
+        {
+            case ConsoleKey.RightArrow:
+                if (x != 23)
+                {
+                    Console.SetCursorPosition(x, y);
+                    x++;
+                    Console.Write("-");
+                    Console.SetCursorPosition(x, y);
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.LeftArrow:
+                if (x != 1)
+                {
+                    Console.SetCursorPosition(x, y);
+                    x--;
+                    Console.Write("-");
+                    Console.SetCursorPosition(x, y);
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.UpArrow:
+                if (y != 1)
+                {
+                    Console.SetCursorPosition(x, y);
+                    y--;
+                    Console.Write("-");
+                    Console.SetCursorPosition(x, y);
+                    Console.Write("@");
+                }
+                break;
+            case ConsoleKey.DownArrow:
+                if (y != 23)
+                {
+                    Console.SetCursorPosition(x, y);
+                    y++;
+                    Console.Write("-");
+                    Console.SetCursorPosition(x, y);
+                    Console.Write("@");
+                }
+                break;
+        }
+    } while (checkKey.Key != ConsoleKey.Escape);
+    Console.SetCursorPosition(0, 29);
+    Console.WriteLine("Goodbye!");
+}
+Exercise13();
