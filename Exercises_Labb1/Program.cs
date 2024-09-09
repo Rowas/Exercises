@@ -118,7 +118,7 @@ for  (int i = 0; i < longString.Length - 1; i++)
 }
 */
 
-
+/*
 //Labb Exercise7
 string longString = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?";
 string shortString = "chuck";
@@ -156,7 +156,7 @@ for (int i = 0; i <= longString.Length - shortString.Length; i++)
     }
 }
 Console.ForegroundColor = ConsoleColor.Gray;
-
+*/
 
 /*
 //Labb Exercise8
