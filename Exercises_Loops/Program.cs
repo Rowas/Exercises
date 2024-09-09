@@ -479,31 +479,84 @@ Exercise14();
 
 /*
 //Rock, Paper, Scissors
+using System;
+using System.Runtime.Serialization;
+
 static void Exercise15()
 {
     var randChoice = new Random();
     string[] options = new string[3] { "Rock", "Paper", "Scissors" };
-    int playerChoice = 0;
-    string cpuChoice;
+    string playerChoice;
+    int cpuChoice;
+    int cpuWins = 0;
+    int pcWins = 0;
+    int draw = 0;
+    bool isStop = false;
     while (true)
     {
         int r = randChoice.Next(options.Length);
         Console.WriteLine("Pick a choice: ");
-        Console.WriteLine("0: Rock");
-        Console.WriteLine("1: Paper");
-        Console.WriteLine("2: Scissors");
+        Console.WriteLine("Rock, Paper, or Scissors.");
+        Console.WriteLine("Type Stop to end the game.");
         while (true)
         {
-            if (int.TryParse(Console.ReadLine(), out playerChoice))
+            
+            playerChoice = Console.ReadLine();
+            switch (playerChoice)
             {
-                break;
+                case "Rock":
+                    break;
+                case "Paper":
+                    break;
+                case "Scissors":
+                    break;
+                case "Stop":
+                    isStop = true;
+                    break;
+                default:
+                    Console.WriteLine("Not a valid choice, try again.");
+                    continue;
             }
-            else
-            {
-                Console.WriteLine("Invalid input, enter a valid option.");
-            }
+            break;
         }
-        
+        if (isStop == true)
+        {
+            break;
+        }
+        cpuChoice = randChoice.Next(3);
+        if (options[cpuChoice] == "Paper" && playerChoice == "Scissors")
+        {
+            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
+            Console.WriteLine($"The Player picked {playerChoice}.");
+            Console.WriteLine("Player wins this round!");
+            Console.WriteLine();
+            pcWins++;
+        }
+        else if (options[cpuChoice] == "Rock" && playerChoice == "Scissors")
+        {
+            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
+            Console.WriteLine($"The Player picked {playerChoice}.");
+            Console.WriteLine("CPU wins this round!");
+            Console.WriteLine();
+            cpuWins++;
+        }
+        else if (options[cpuChoice] == "Scissors") 
+        else
+        {
+            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
+            Console.WriteLine($"The Player picked {playerChoice}.");
+            Console.WriteLine("The round is a draw!");
+            Console.WriteLine();
+            draw++;
+        }
+    }
+    Console.WriteLine("Game is over!");
+    if (pcWins > 0 || cpuWins > 0 || draw > 0)
+    {
+        Console.WriteLine("The final score is as follows: ");
+        Console.WriteLine($"Player wins: {pcWins}");
+        Console.WriteLine($"CPU wins: {cpuWins}");
+        Console.WriteLine($"Draws: {draw}");
     }
 }
 Exercise15();

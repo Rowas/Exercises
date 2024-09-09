@@ -210,6 +210,14 @@ for  (int i = 0; i < printString.Length; i++)
 }
 */
 
+//Labb Exercise10
+
+
+//Labb Exercise11
+
+
+//Labb Exercise12
+
 /*
 //Labb Exercise13
 string stringValue = "abcdefghijklmnopqrstuvwxyz";
@@ -228,6 +236,7 @@ for (int i = 0; i < stringValue.Length-4; i++)
     Console.WriteLine();
 }
 */
+
 
 /*
 //Labb Exercise14

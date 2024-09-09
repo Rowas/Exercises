@@ -243,9 +243,44 @@ Exercise11();
 
 /*
 //Color shifting in user defined string between instances of chars
+using System.Reflection.Metadata;
+
 static void Exercise12()
 {
+    int letterFound = 0;
+    Console.WriteLine("Enter a sentence: ");
+    string userString = Console.ReadLine();
+    Console.WriteLine("Enter a letter: ");
+    char userLetter = Convert.ToChar(Console.ReadLine());
 
+    foreach (char c in userString)
+    {
+        if (c == userLetter)
+        {
+            if (letterFound == 1)
+            {
+                Console.Write(c);
+                letterFound--;
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(c);
+                letterFound++;
+            }
+        }
+        else if (c != userLetter && letterFound == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(c);
+        }
+        else
+        {
+            Console.Write(c);
+        }
+    }
+    Console.ForegroundColor = ConsoleColor.Gray;
 }
 Exercise12();
 */
