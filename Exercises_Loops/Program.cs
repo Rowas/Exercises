@@ -480,35 +480,74 @@ Exercise14();
 /*
 //Rock, Paper, Scissors
 using System;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 
 static void Exercise15()
 {
+    static string CompareResult(int cpuChoice, int pcChoice)
+    {
+        string result;
+        if (cpuChoice == pcChoice)
+        {
+            result = "Draw";
+        }
+        else if (cpuChoice == 0 && pcChoice == 2)
+        {
+            result = "CPU Wins";
+        }
+        else if (cpuChoice == 2 && pcChoice == 0)
+        {
+            result = "PC Wins";
+        }
+        else if (cpuChoice == 2 && pcChoice == 1)
+        {
+            result = "CPU Wins";
+        }
+        else if (cpuChoice == 1 && pcChoice == 2)
+        {
+            result = "PC Wins";
+        }
+        else if (cpuChoice == 1 && pcChoice == 0)
+        {
+            result = "CPU Wins";
+        }
+        else
+        {
+            result = "PC Wins";
+        }
+        return result;
+
+    }
     var randChoice = new Random();
     string[] options = new string[3] { "Rock", "Paper", "Scissors" };
     string playerChoice;
+    int pcChoice = 3;
     int cpuChoice;
     int cpuWins = 0;
     int pcWins = 0;
     int draw = 0;
+    int rounds = 0;
     bool isStop = false;
     while (true)
     {
-        int r = randChoice.Next(options.Length);
         Console.WriteLine("Pick a choice: ");
         Console.WriteLine("Rock, Paper, or Scissors.");
         Console.WriteLine("Type Stop to end the game.");
         while (true)
         {
-            
+
             playerChoice = Console.ReadLine();
             switch (playerChoice)
             {
                 case "Rock":
+                    pcChoice = 0;
                     break;
                 case "Paper":
+                    pcChoice = 1;
                     break;
                 case "Scissors":
+                    pcChoice = 2;
                     break;
                 case "Stop":
                     isStop = true;
@@ -524,40 +563,36 @@ static void Exercise15()
             break;
         }
         cpuChoice = randChoice.Next(3);
-        if (options[cpuChoice] == "Paper" && playerChoice == "Scissors")
+
+        string result = CompareResult (cpuChoice, pcChoice);
+
+        Console.WriteLine(result);
+
+        if (result == "PC Wins")
         {
-            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
-            Console.WriteLine($"The Player picked {playerChoice}.");
-            Console.WriteLine("Player wins this round!");
-            Console.WriteLine();
+            rounds++;
             pcWins++;
         }
-        else if (options[cpuChoice] == "Rock" && playerChoice == "Scissors")
+        else if (result == "CPU Wins")
         {
-            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
-            Console.WriteLine($"The Player picked {playerChoice}.");
-            Console.WriteLine("CPU wins this round!");
-            Console.WriteLine();
+            rounds++;
             cpuWins++;
         }
-        else if (options[cpuChoice] == "Scissors") 
         else
         {
-            Console.WriteLine($"The CPU picked {options[cpuChoice]}.");
-            Console.WriteLine($"The Player picked {playerChoice}.");
-            Console.WriteLine("The round is a draw!");
-            Console.WriteLine();
+            rounds++;
             draw++;
         }
+
     }
-    Console.WriteLine("Game is over!");
-    if (pcWins > 0 || cpuWins > 0 || draw > 0)
-    {
-        Console.WriteLine("The final score is as follows: ");
-        Console.WriteLine($"Player wins: {pcWins}");
-        Console.WriteLine($"CPU wins: {cpuWins}");
-        Console.WriteLine($"Draws: {draw}");
-    }
+    Console.WriteLine();
+    Console.WriteLine("Game has ended.");
+    Console.WriteLine();
+    Console.WriteLine("Results are as follows: ");
+    Console.WriteLine();
+    Console.WriteLine($"Rounds won by Player: {pcWins}");
+    Console.WriteLine($"Rounds won by CPU: {cpuWins}");
+    Console.WriteLine($"Rounds ended in a draw: {draw}");
 }
 Exercise15();
 */
