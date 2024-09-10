@@ -130,10 +130,89 @@ Exercise5();
 //Single line calculator
 static void Exercise6()
 {
+    static (double, char, double) CleanCalcString(string requestedCalculation)
+    {
+        
+        double firstNumber = 0;
+        char ops = ' ';
+        double secondNumber = 0;
+        char[] calcStringCleaning = new char[requestedCalculation.Length];
+        double[] taker = new double[requestedCalculation.Length];
+        double[] giver = new double[requestedCalculation.Length];
+        int index = 0;
+        
+        for (int i = 0; i < calcStringCleaning.Length; i++)
+        {
+            calcStringCleaning[i] = char.Parse(requestedCalculation.Substring(i,1));
+        }
 
+        foreach (char c in calcStringCleaning)
+        {
+            if (char.IsDigit(c) == true && ops == ' ')
+            {
+                taker[index] = char.GetNumericValue(c);
+                index++;
+            }
+            else if (char.IsDigit(c) == true)
+            {
+                giver[index] = char.GetNumericValue(c);
+                index++;
+            }
+            else if (c == '+' || c == '-' || c == '*' || c == '/')
+            {
+                index = 0;
+                ops = c;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        
+        
+
+        Console.WriteLine(firstNumber);
+
+        return (firstNumber, ops, secondNumber);
+    }
+    static void Calculator()
+    {
+        string requestedCalculation;
+
+        Console.WriteLine("Single line calculator");
+        Console.Write("Enter what to calculate: ");
+        
+        while (true)
+        {
+            requestedCalculation = Console.ReadLine();
+            if (requestedCalculation == "")
+            {
+                Console.WriteLine("Invalid input, try again.");
+            }
+            else
+            {
+                break;
+            }
+        }
+        (double number1, char ops, double number2) = CleanCalcString(requestedCalculation);
+        switch (ops)
+        {
+            case '+':
+                Console.Write($"= {number1 + number2}"); break;
+            case '-':
+                Console.Write($"= {number1 - number2}"); break;
+            case '*':
+                Console.WriteLine($"= {number1 * number2}"); break;
+            case '/':
+                Console.WriteLine($"= {number1 / number2}"); break;
+        }
+
+    }
+    Calculator();
 }
 Exercise6();
 */
+
 
 /*
 //7 words, user specified, printed reversed order
