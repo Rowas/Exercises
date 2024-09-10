@@ -288,7 +288,7 @@ static void Exercise12()
 Exercise12();
 */
 
-
+/*
 //Move @ in a box using function from previous Exercise
 //Hard coding box size of 25x25
 
@@ -346,10 +346,8 @@ static void Exercise13()
 
     static void MoveMent()
     {
-        ConsoleKeyInfo checkKey;
-        Console.SetCursorPosition(12, 12);
-        Console.Write("@");
         Console.SetCursorPosition(0, 26);
+        ConsoleKeyInfo checkKey;
         Console.WriteLine("Move with arrow-keys on the keyboard. \nPressing Esc will cancel the program.");
         int x = 12;
         int y = 12;
@@ -409,6 +407,12 @@ static void Exercise13()
         Console.SetCursorPosition(0, 29);
         Console.WriteLine("Goodbye!");
     }
+
+    Console.SetCursorPosition(12, 12);
+    Console.Write("@");
+
     MoveMent();
 }
 Exercise13();
+*/
+
