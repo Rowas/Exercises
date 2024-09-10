@@ -110,14 +110,10 @@ Exercise4();
 //Double and Half
 static void Exercise5()
 {
-    Console.WriteLine("And with that out of the way, I will now give you ");
-    Console.WriteLine("the numbers that are twice and half as much as a ");
-    Console.WriteLine("provided number. Please give me a number for ");
-    Console.WriteLine("comparison.");
     Console.WriteLine("Enter number: ");
     decimal evalNumber = Convert.ToDecimal(Console.ReadLine());
 
-    Console.WriteLine("The number you provided: " + evalNumber);
+    Console.WriteLine("The provided number: " + evalNumber);
     Console.WriteLine("The number that is twice as much: " + evalNumber * 2);
     Console.WriteLine("The number that is half as much: " + evalNumber / 2);
 }
