@@ -323,7 +323,7 @@ static void Exercise13()
                     if (i > 0 && i < width - 1)
                     {
                         Console.SetCursorPosition(i, y);
-                        Console.Write("-");
+                        Console.Write(" ");
                     }
                     else
                     {
@@ -366,7 +366,7 @@ static void Exercise13()
                 {
                     Console.SetCursorPosition(x, y);
                     x++;
-                    Console.Write("-");
+                    Console.Write(" ");
                     Console.SetCursorPosition(x, y);
                     Console.Write("@");
                 }
@@ -376,7 +376,7 @@ static void Exercise13()
                 {
                     Console.SetCursorPosition(x, y);
                     x--;
-                    Console.Write("-");
+                    Console.Write(" ");
                     Console.SetCursorPosition(x, y);
                     Console.Write("@");
                 }
@@ -386,7 +386,7 @@ static void Exercise13()
                 {
                     Console.SetCursorPosition(x, y);
                     y--;
-                    Console.Write("-");
+                    Console.Write(" ");
                     Console.SetCursorPosition(x, y);
                     Console.Write("@");
                 }
@@ -396,7 +396,7 @@ static void Exercise13()
                 {
                     Console.SetCursorPosition(x, y);
                     y++;
-                    Console.Write("-");
+                    Console.Write(" ");
                     Console.SetCursorPosition(x, y);
                     Console.Write("@");
                 }
