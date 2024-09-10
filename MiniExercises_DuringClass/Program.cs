@@ -1,4 +1,4 @@
-﻿
+﻿/*
 static int CalculateDiffFromNow(int futureYear)
 {
     int currentYear = DateTime.Now.Year;
@@ -24,3 +24,4 @@ catch (ArgumentOutOfRangeException)
 {
     Console.WriteLine("The year is not in the future!");
 }
+*/
