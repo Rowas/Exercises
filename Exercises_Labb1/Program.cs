@@ -210,7 +210,55 @@ for  (int i = 0; i < printString.Length; i++)
 }
 */
 
+
+/*
 //Labb Exercise10
+
+using System.Diagnostics.Tracing;
+
+static void Exercise10()
+{
+    string text = "Chuck Wood WoodChuck Chuck Wood";
+    int removeMinus = 0;
+    int removePlus = 5;
+    int startIndex = 0;
+    static int FindFirstWord(string providedText, int wordIndex)
+    {
+        int indexReturn = 0;
+        char findSpace = ' ';
+        indexReturn = providedText.IndexOf(findSpace, wordIndex);
+        return indexReturn;
+    }
+
+    static string LeaveWord(string text, int removePlus, int removeMinus)
+    {
+        string colourWord = text.Remove(removePlus, removeMinus).Remove(removePlus);
+        Console.WriteLine(colourWord);
+        return colourWord;
+    }
+
+    static (string, string) wordChop(string providedText, int removeFrom, int removeTo)
+    {
+        string textBeforeWord = providedText.Remove(removeFrom);
+        string textAfterWord = providedText.Remove(0, removeTo + 1);
+        return (textBeforeWord, textAfterWord);
+    }
+
+
+
+    string printtext = LeaveWord(text, removePlus, removeMinus);
+
+    (string before, string after) = wordChop(text, removeMinus, removePlus);
+
+    Console.ForegroundColor = ConsoleColor.Gray;
+    Console.Write(before);
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.Write(printtext);
+    Console.ForegroundColor = ConsoleColor.Gray;
+    Console.WriteLine(after);
+}
+Exercise10();
+*/
 
 
 //Labb Exercise11

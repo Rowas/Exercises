@@ -177,13 +177,52 @@ Exercise9();
 */
 
 /*
+//UNFINISHED!!!
 //Find occurance of 'c' in "Text". 
+//UNFINISHED!!!
+
 static void Exercise10()
 {
-    
+    string wordString = " ";
+    string searchChar = " ";
+    int startIndex = 0;
+    int stopIndex = 0;
+    List<int> occurrenceList = new List<int>();
+    while (wordString == " ")
+    {
+        Console.WriteLine("Enter a word/sentence: ");
+        wordString = Console.ReadLine();
+        Console.WriteLine("Enter a char to find occurrence of: ");
+        searchChar = Console.ReadLine();
+    }
+static (int, int) FindIndex(string wordString, string searchChar, int startIndex)
+    {
+        int stopIndex = 0;
+        for (int i = startIndex; i < wordString.Length; i++)
+        {
+            if (wordString.Substring(i,1) == searchChar)
+            {
+                startIndex = i;
+                return (startIndex, stopIndex);
+            }
+            stopIndex++;
+        }
+        return (0, stopIndex);
+    }
+    while (stopIndex < wordString.Length)
+    {
+        (startIndex, stopIndex) = (FindIndex(wordString, searchChar, startIndex));
+        occurrenceList.Add(startIndex);
+        startIndex++;
+    }
+
+    Console.WriteLine($"Char {searchChar} occurs on index position: {occurrenceList}");
+
 }
 Exercise10();
+//UNFINISHED!!!
 */
+//UNFINISHED!!!
 
 /*
 //Dice throwing simulator. 
