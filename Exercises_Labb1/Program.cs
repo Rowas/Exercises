@@ -210,62 +210,82 @@ for  (int i = 0; i < printString.Length; i++)
 }
 */
 
-
 /*
 //Labb Exercise10
-
-using System.Diagnostics.Tracing;
-
 static void Exercise10()
 {
-    string text = "Chuck Wood WoodChuck Chuck Wood";
-    int removeMinus = 0;
-    int removePlus = 5;
-    int startIndex = 0;
-    static int FindFirstWord(string providedText, int wordIndex)
+    string chopString = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?";
+    string[] choppedArray = chopString.Split(" ");
+    int endLine = 0;
+    
+    while(endLine < choppedArray.Length)
     {
-        int indexReturn = 0;
-        char findSpace = ' ';
-        indexReturn = providedText.IndexOf(findSpace, wordIndex);
-        return indexReturn;
+        for (int i = endLine; i <= endLine+1; i++)
+        {
+            Console.Write(choppedArray[i]);
+        }
+        Console.WriteLine();
+        endLine++;
     }
-
-    static string LeaveWord(string text, int removePlus, int removeMinus)
-    {
-        string colourWord = text.Remove(removePlus, removeMinus).Remove(removePlus);
-        Console.WriteLine(colourWord);
-        return colourWord;
-    }
-
-    static (string, string) wordChop(string providedText, int removeFrom, int removeTo)
-    {
-        string textBeforeWord = providedText.Remove(removeFrom);
-        string textAfterWord = providedText.Remove(0, removeTo + 1);
-        return (textBeforeWord, textAfterWord);
-    }
-
-
-
-    string printtext = LeaveWord(text, removePlus, removeMinus);
-
-    (string before, string after) = wordChop(text, removeMinus, removePlus);
-
-    Console.ForegroundColor = ConsoleColor.Gray;
-    Console.Write(before);
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.Write(printtext);
-    Console.ForegroundColor = ConsoleColor.Gray;
-    Console.WriteLine(after);
 }
 Exercise10();
 */
 
-
 //Labb Exercise11
 
-
+/*
 //Labb Exercise12
+static void Exercise12()
+{
+    string text = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?";
+    
+    int removeMin = 0;
+    //int removePlus = 0;
+    int startIndex = 0;
+    string foundWord = "";
+    int endLine = 0;
 
+    static (string, int) FindWord(string providedText, int wordIndex)
+    {
+        int indexReturn = 0;
+        char findSpace = ' ';
+        indexReturn = providedText.IndexOf(findSpace, wordIndex);
+        string wordReturn = providedText.Substring(wordIndex, indexReturn);
+        return (wordReturn, indexReturn);
+    }
+
+    static (string, string) wordChop(string foundWord, string chopText, int startIndex, int removeMin)
+    {
+
+        string beforeWord = chopText.Remove(removeMin);
+        string afterWord = chopText.Remove(0, startIndex);
+
+        return (beforeWord, afterWord);
+    }
+
+    static void PrintText(string word, string before, string after)
+    {
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.Write(before);
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write(word);
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine(after);
+    }
+
+    while (endLine <= text.Length)
+    {
+        (foundWord, startIndex) = FindWord(text, startIndex);
+        (string before, string after) = wordChop(foundWord, text, startIndex, removeMin);
+        PrintText(foundWord, before, after);
+        removeMin = startIndex;
+        endLine = endLine + startIndex;
+    }
+
+    
+}
+Exercise12();
+*/
 
 /*
 //Labb Exercise13

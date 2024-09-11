@@ -48,7 +48,7 @@ static void Exercis3()
 Exercise3();
 */
 
-/*
+
 //Hide vowels, User defined string, in Swedish
 static void Exercise4()
 {
@@ -65,7 +65,7 @@ static void Exercise4()
     {
         hiddenVowels[x++] = c;
     }
-    while (true)
+    while (x <= hiddenVowels.Length)
     {
         for (int i = 0; i < hiddenVowels.Length; i++)
         {
@@ -76,20 +76,13 @@ static void Exercise4()
             }
             
         }
-        if (x == hiddenVowels.Length)
-        {
-            break;
-        }
-        else
-        {
-            x++;
-        }
+        x++;
     }
     string printString = new string(hiddenVowels);
     Console.WriteLine(printString);
 }
 Exercise4();
-*/
+
 
 /*
 //Request string from User, check if string is an palindrome
