@@ -167,14 +167,80 @@ static void Exercise8()
 Exercise8();
 */
 
-/*
+
 //Convert whole number to matching words
-static void Exercise9()
+//static void Exercise9()
+//{
+string inputString = " ";
+string Tera = "billion";
+string Mega = "million";
+string Kilo = "thousands";
+string Hecto = "hundred";
+string[] Tens = new string[] { "Eleven", "Twelve", "Thrirteen", "Fourtheen", "Fiftheen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+string[] FirstTens = new string[] { "Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+string[] Ones = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+int count = 0;
+
+Console.WriteLine("Enter a number (Please, no more than 1 Billion)");
+inputString = Console.ReadLine();
+
+int[] Numbers = new int[inputString.Length];
+
+for (int i = 0; i < inputString.Length; i++)
 {
-    
+    Numbers[i] = (int)Char.GetNumericValue(Convert.ToChar(inputString[i]));
 }
-Exercise9();
-*/
+
+if (Numbers.Length == 1)
+{
+    Console.WriteLine(Ones[Numbers[0]]);
+}
+else if (Numbers.Length == 2)
+{
+
+    if (Numbers[1] == 0)
+    {
+        Console.WriteLine(FirstTens[Numbers[0] - 1]); 
+    }
+    else if (Numbers[0] == 1 && Numbers[1] > 0)
+    {
+        Console.WriteLine(Tens[Numbers[1] - 1]);
+    }
+    else if (Numbers[1] > 0)
+    {
+        Console.WriteLine($"{FirstTens[Numbers[0] - 1]} {Ones[Numbers[1]]}");
+    }
+}
+else if (Numbers.Length == 3)
+{
+    if (Numbers[1] == 0 && Numbers[2] == 0)
+    {
+        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto}");
+    }
+    else if (Numbers[1] > 0 && Numbers[2] == 0)
+    {
+        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto} {FirstTens[Numbers[0] - 1]}");
+    }
+    else if (Numbers[1] == 0 && Numbers[0] > 0)
+    {
+        Console.Write($"{Ones[Numbers[0]]} {Hecto} {Ones[Numbers[2]]}");
+        Console.WriteLine();
+    }
+    else if (Numbers[1] > 0 && Numbers[2] > 0)
+    {
+        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto} {FirstTens[Numbers[1] - 1]} {Ones[Numbers[2]]}");
+    }
+}
+else if (Numbers.Length == 4)
+{
+
+}
+
+
+//}
+//Exercise9();
+
+
 
 /*
 //UNFINISHED!!!
@@ -195,12 +261,12 @@ static void Exercise10()
         Console.WriteLine("Enter a char to find occurrence of: ");
         searchChar = Console.ReadLine();
     }
-static (int, int) FindIndex(string wordString, string searchChar, int startIndex)
+    static (int, int) FindIndex(string wordString, string searchChar, int startIndex)
     {
         int stopIndex = 0;
         for (int i = startIndex; i < wordString.Length; i++)
         {
-            if (wordString.Substring(i,1) == searchChar)
+            if (wordString.Substring(i, 1) == searchChar)
             {
                 startIndex = i;
                 return (startIndex, stopIndex);
@@ -221,8 +287,8 @@ static (int, int) FindIndex(string wordString, string searchChar, int startIndex
 }
 Exercise10();
 //UNFINISHED!!!
-*/
 //UNFINISHED!!!
+*/
 
 /*
 //Dice throwing simulator. 

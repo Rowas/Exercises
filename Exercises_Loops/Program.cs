@@ -431,7 +431,10 @@ static void Exercise13()
         if (isPrime)
         {
             primeNumber++;
-            Console.WriteLine($"Prime number {primeNumber} is {checkedNum}");
+            if (primeNumber % 1000 == 0)
+            {
+                Console.WriteLine($"Prime number {primeNumber} is {checkedNum}");
+            }
         }
         checkedNum++;
     } while (primeNumber != RequestPrimes);
