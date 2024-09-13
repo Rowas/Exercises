@@ -93,15 +93,13 @@ static void Exercise5()
 
     char[] wordReversed = new char[reqWord.Length];
 
-    int i = reqWord.Length;
-
-    i--;
-
-    foreach (char c in reqWord)
+    for (int i = 0; i < reqWord.Length; i++)
     {
-        wordReversed[i] = c;
-        i--;
+        wordReversed[i] = reqWord[i];
     }
+
+    wordReversed.Reverse();
+
     string printString = new string(wordReversed);
 
     string testWord1 = reqWord.ToLower();
