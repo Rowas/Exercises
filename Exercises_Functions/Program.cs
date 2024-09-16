@@ -167,18 +167,15 @@ static void Exercise8()
 Exercise8();
 */
 
-
-//Convert whole number to matching words
+/*
+//Convert numbers to matching words
 //static void Exercise9()
 //{
+using System.Net.WebSockets;
+using System.Numerics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 string inputString = " ";
-string Tera = "billion";
-string Mega = "million";
-string Kilo = "thousands";
-string Hecto = "hundred";
-string[] Tens = new string[] { "Eleven", "Twelve", "Thrirteen", "Fourtheen", "Fiftheen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-string[] FirstTens = new string[] { "Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
-string[] Ones = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
 int count = 0;
 
 Console.WriteLine("Enter a number (Please, no more than 1 Billion)");
@@ -186,11 +183,155 @@ inputString = Console.ReadLine();
 
 int[] Numbers = new int[inputString.Length];
 
+static void Onesis(int Number)
+{
+    string[] Ones = new string[] { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+    Console.Write($"{Ones[Number]}");
+    return;
+}
+
+static void TenTwenty (int Number)
+{
+    string[] TenTwenty = new string[] { "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen " };
+    
+    Console.Write($"{TenTwenty[Number]}");
+}
+static void TwentysUp(int Number, int Number2)
+{
+    string[] TwentyUp = new string[] { "Twenty ", "Thirty ", "Fourty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety " };
+
+    Console.Write($"{TwentyUp[Number - 2]}");
+    if (Number2 > 0)
+    {
+        Onesis(Number2);
+    }
+}
+
+static void Hundreds(int Number)
+{
+    string Hecto = " hundred ";
+    if (Number == 0)
+    {
+        return;
+    }
+    Onesis(Number);
+    Console.Write($"{Hecto}");
+}
+
+static void Thousands(int Number)
+{
+    string Kilo = " thousands ";
+    if (Number == 0)
+    {
+        return;
+    }
+    Onesis(Number);
+    Console.Write($"{Kilo}");
+}
+
+static void Millions(int Number)
+{
+    string Mega = " million ";
+    if (Number == 0)
+    {
+        return;
+    }
+    Onesis(Number);
+    Console.Write($"{Mega}");
+}
+
+static void Billions(int Number)
+{
+    string Tera = " billion ";
+    Onesis(Number);
+    Console.Write($"{Tera}");
+}
+
 for (int i = 0; i < inputString.Length; i++)
 {
     Numbers[i] = (int)Char.GetNumericValue(Convert.ToChar(inputString[i]));
 }
 
+if (Numbers.Length == 1)
+{
+    Onesis(Numbers[0]);
+}
+
+if (Numbers.Length == 2)
+{
+    if (Numbers[0] == 1)
+    {
+        TenTwenty(Numbers[1]);
+    }
+    
+    else
+    {
+        TwentysUp(Numbers[0], Numbers[1]);
+    }
+}
+
+if (Numbers.Length == 3)
+{
+    Hundreds(Numbers[0]);
+
+    if (Numbers[1] == 1)
+    {
+        TenTwenty(Numbers[2]);
+    }
+    
+    else if (Numbers[1] > 1)
+    {
+        TwentysUp(Numbers[1], Numbers[2]);
+    }
+}
+
+if (Numbers.Length == 4)
+{
+    Thousands(Numbers[0]);
+    
+    if (Numbers[1] > 1)
+    {
+        Hundreds(Numbers[1]);
+    }
+    
+    if (Numbers[2] == 1)
+    {
+        TenTwenty(Numbers[2]);
+    }
+    
+    else if (Numbers[2] > 1)
+    {
+        TwentysUp(Numbers[2], Numbers[3]);
+    }
+}
+
+if (Numbers.Length == 5)
+{
+    if (Numbers[0] == 1)
+    {
+        TenTwenty(Numbers[1]);
+    }
+    else if (Numbers[0] > 1)
+    {
+        TwentysUp(Numbers[0], Numbers[1]);
+    }
+    if (Numbers[0] > 1)
+    {
+        Thousands(Numbers[1]);
+    }
+    Hundreds(Numbers[2]);
+    if (Numbers[3] == 1)
+    {
+        TenTwenty(Numbers[4]);
+    }
+
+    else if (Numbers[3] > 1)
+    {
+        TwentysUp(Numbers[3], Numbers[4]);
+    }
+}*/
+
+/*
 if (Numbers.Length == 1)
 {
     Console.WriteLine(Ones[Numbers[0]]);
@@ -235,6 +376,7 @@ else if (Numbers.Length == 4)
 {
 
 }
+*/
 
 
 //}

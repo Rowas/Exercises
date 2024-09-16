@@ -25,3 +25,25 @@ catch (ArgumentOutOfRangeException)
     Console.WriteLine("The year is not in the future!");
 }
 */
+
+/*
+Cat[] cats = new Cat[100];
+
+for (int i = 0; i < cats.Length; i++)
+{
+    cats[i] = new Cat() { name = $"Katt{i + 1}", age = i + 1 };
+}
+
+foreach (var cat in cats)
+{
+    Console.WriteLine($"{cat.name} är {cat.age}");
+}
+
+class Cat
+{
+    public string name = "default name";
+
+    public int age = 0;
+}
+*/
+
