@@ -36,7 +36,7 @@ for (int i = 0; i < cats.Length; i++)
 
 foreach (var cat in cats)
 {
-    Console.WriteLine($"{cat.name} är {cat.age}");
+    Console.WriteLine($"{cat.name} är {cat.age} år");
 }
 
 class Cat
