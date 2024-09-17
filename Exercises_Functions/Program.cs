@@ -178,7 +178,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 string inputString = " ";
 int count = 0;
 
-Console.WriteLine("Enter a number (Please, no more than 1 Billion)");
+Console.WriteLine("Enter a number (Maximum Valid Input is 99 999)");
 inputString = Console.ReadLine();
 
 int[] Numbers = new int[inputString.Length];
@@ -190,10 +190,10 @@ static void Onesis(int Number)
     return;
 }
 
-static void TenTwenty (int Number)
+static void TenTwenty(int Number)
 {
     string[] TenTwenty = new string[] { "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen " };
-    
+
     Console.Write($"{TenTwenty[Number]}");
 }
 static void TwentysUp(int Number, int Number2)
@@ -209,7 +209,7 @@ static void TwentysUp(int Number, int Number2)
 
 static void Hundreds(int Number)
 {
-    string Hecto = " hundred ";
+    string Hecto = "hundred ";
     if (Number == 0)
     {
         return;
@@ -220,9 +220,14 @@ static void Hundreds(int Number)
 
 static void Thousands(int Number)
 {
-    string Kilo = " thousands ";
+    string Kilo = "thousands ";
     if (Number == 0)
     {
+        return;
+    }
+    else if (Number == 10)
+    {
+        Console.Write($"{Kilo}");
         return;
     }
     Onesis(Number);
@@ -231,7 +236,7 @@ static void Thousands(int Number)
 
 static void Millions(int Number)
 {
-    string Mega = " million ";
+    string Mega = "million ";
     if (Number == 0)
     {
         return;
@@ -242,7 +247,7 @@ static void Millions(int Number)
 
 static void Billions(int Number)
 {
-    string Tera = " billion ";
+    string Tera = "billion ";
     Onesis(Number);
     Console.Write($"{Tera}");
 }
@@ -263,7 +268,7 @@ if (Numbers.Length == 2)
     {
         TenTwenty(Numbers[1]);
     }
-    
+
     else
     {
         TwentysUp(Numbers[0], Numbers[1]);
@@ -278,7 +283,7 @@ if (Numbers.Length == 3)
     {
         TenTwenty(Numbers[2]);
     }
-    
+
     else if (Numbers[1] > 1)
     {
         TwentysUp(Numbers[1], Numbers[2]);
@@ -288,20 +293,25 @@ if (Numbers.Length == 3)
 if (Numbers.Length == 4)
 {
     Thousands(Numbers[0]);
-    
+
     if (Numbers[1] > 1)
     {
         Hundreds(Numbers[1]);
     }
-    
+
     if (Numbers[2] == 1)
     {
         TenTwenty(Numbers[2]);
     }
-    
-    else if (Numbers[2] > 1)
+
+    if (Numbers[2] > 1)
     {
         TwentysUp(Numbers[2], Numbers[3]);
+    }
+
+    if (Numbers[3] > 0 && Numbers[2] == 0)
+    {
+        Onesis(Numbers[3]);
     }
 }
 
@@ -310,71 +320,29 @@ if (Numbers.Length == 5)
     if (Numbers[0] == 1)
     {
         TenTwenty(Numbers[1]);
-    }
-    else if (Numbers[0] > 1)
-    {
-        TwentysUp(Numbers[0], Numbers[1]);
+        Thousands(10);
     }
     if (Numbers[0] > 1)
     {
-        Thousands(Numbers[1]);
+        TwentysUp(Numbers[0], Numbers[1]);
+        Thousands(10);
     }
-    Hundreds(Numbers[2]);
+    if (Numbers[2] > 0)
+    {
+        Hundreds(Numbers[2]);
+    }
+    if (Numbers[3] > 1)
+    {
+        TwentysUp(Numbers[3], Numbers[4]);
+    }
     if (Numbers[3] == 1)
     {
         TenTwenty(Numbers[4]);
     }
-
-    else if (Numbers[3] > 1)
+    if (Numbers[4] > 0 && Numbers[3] == 0)
     {
-        TwentysUp(Numbers[3], Numbers[4]);
+        Onesis(Numbers[4]);
     }
-}*/
-
-/*
-if (Numbers.Length == 1)
-{
-    Console.WriteLine(Ones[Numbers[0]]);
-}
-else if (Numbers.Length == 2)
-{
-
-    if (Numbers[1] == 0)
-    {
-        Console.WriteLine(FirstTens[Numbers[0] - 1]); 
-    }
-    else if (Numbers[0] == 1 && Numbers[1] > 0)
-    {
-        Console.WriteLine(Tens[Numbers[1] - 1]);
-    }
-    else if (Numbers[1] > 0)
-    {
-        Console.WriteLine($"{FirstTens[Numbers[0] - 1]} {Ones[Numbers[1]]}");
-    }
-}
-else if (Numbers.Length == 3)
-{
-    if (Numbers[1] == 0 && Numbers[2] == 0)
-    {
-        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto}");
-    }
-    else if (Numbers[1] > 0 && Numbers[2] == 0)
-    {
-        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto} {FirstTens[Numbers[0] - 1]}");
-    }
-    else if (Numbers[1] == 0 && Numbers[0] > 0)
-    {
-        Console.Write($"{Ones[Numbers[0]]} {Hecto} {Ones[Numbers[2]]}");
-        Console.WriteLine();
-    }
-    else if (Numbers[1] > 0 && Numbers[2] > 0)
-    {
-        Console.WriteLine($"{Ones[Numbers[0]]} {Hecto} {FirstTens[Numbers[1] - 1]} {Ones[Numbers[2]]}");
-    }
-}
-else if (Numbers.Length == 4)
-{
-
 }
 */
 

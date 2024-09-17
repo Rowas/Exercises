@@ -136,38 +136,46 @@ class Person
 */
 
 
-//Exercise 5
+//Exercise 5, 6, 7
 //Update to Person Class
 //Add fields for parents
+//Add reference to parents
+//Add class method returning self and parents
 
-using System.Security.Cryptography.X509Certificates;
 
-Person mySelf = new Person() { firstName = "Andreas", lastName = "Lind-Sahlin" };
-Person Mother = new Person(mySelf) { firstName = "Mother", lastName = "Lind-Sahlin" };
+Person mySelf = new Person() { firstName = "Andreas", lastName = "Doe" };
+
+Person mamma = new Person() { firstName = "Jane", lastName = mySelf.lastName };
+Person pappa = new Person() { firstName = "John", lastName = mySelf.lastName };
 
 Console.WriteLine($"Person 1's full name is: {mySelf.GetFullName()}");
 
+mySelf.Mother = mamma;
+mySelf.Father = pappa;
+
+Console.WriteLine(mySelf.Mother.GetFullName());
+Console.WriteLine(mySelf.Father.GetFullName());
+
+Console.WriteLine(mySelf.GetSelfAndParents());
 
 class Person
 {
+
     public string firstName = "John";
     public string lastName = "Doe";
+    public Person Mother;
+    public Person Father;
 
     public string GetFullName()
     {
         return firstName + " " + lastName;
     }
+
+    public string GetSelfAndParents()
+    {
+        return $"{this.GetFullName()} {Environment.NewLine} Mother is: {this.Mother.GetFullName()} {Environment.NewLine} Father is: {this.Father.GetFullName()}";
+    }
 }
-
-
-
-//Exercise 6
-//Object representing self + parent
-
-
-
-//Exercise 7
-//string with full self and parent information
 
 
 /*
