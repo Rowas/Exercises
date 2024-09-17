@@ -135,7 +135,7 @@ class Person
 }
 */
 
-
+/*
 //Exercise 5, 6, 7
 //Update to Person Class
 //Add fields for parents
@@ -159,8 +159,7 @@ Console.WriteLine(mySelf.Father.GetFullName());
 Console.WriteLine(mySelf.GetSelfAndParents());
 
 class Person
-{
-
+{ 
     public string firstName = "John";
     public string lastName = "Doe";
     public Person Mother;
@@ -177,7 +176,7 @@ class Person
     }
 }
 
-
+*/
 /*
 //Exercise 8
 //Private field for Height with method for retreiving and changing value 
