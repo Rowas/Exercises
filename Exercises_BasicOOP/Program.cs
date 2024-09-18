@@ -145,21 +145,21 @@ class Person
 Person mother = new Person() { firstName = "Jane", lastName = "Doe" };
 Person father = new Person() { firstName = "John", lastName = mother.lastName };
 
-Person mySelf = new Person() { firstName = "Andreas", lastName = mother.lastName, Mother = mother, Father = father};
+Person mySelf = new Person() { firstName = "Andreas", lastName = mother.lastName, mother = mother, father = father };
 
 Console.WriteLine($"Person 1's full name is: {mySelf.GetFullName()}");
 
-Console.WriteLine(mySelf.Mother.GetFullName());
-Console.WriteLine(mySelf.Father.GetFullName());
+Console.WriteLine(mySelf.mother.GetFullName());
+Console.WriteLine(mySelf.father.GetFullName());
 
 Console.WriteLine(mySelf.GetSelfAndParents());
 
 class Person
-{ 
+{
     public string firstName = "John";
     public string lastName = "Doe";
-    public Person Mother;
-    public Person Father;
+    public Person mother;
+    public Person father;
 
     public string GetFullName()
     {
@@ -168,7 +168,7 @@ class Person
 
     public string GetSelfAndParents()
     {
-        return $"{this.GetFullName()} {Environment.NewLine} Mother is: {this.Mother.GetFullName()} {Environment.NewLine} Father is: {this.Father.GetFullName()}";
+        return $"{this.GetFullName()} {Environment.NewLine} Mother is: {this.mother.GetFullName()} {Environment.NewLine} Father is: {this.father.GetFullName()}";
     }
 }
 */
