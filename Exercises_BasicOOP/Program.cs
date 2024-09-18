@@ -142,16 +142,12 @@ class Person
 //Add reference to parents
 //Add class method returning self and parents
 
+Person mother = new Person() { firstName = "Jane", lastName = "Doe" };
+Person father = new Person() { firstName = "John", lastName = mother.lastName };
 
-Person mySelf = new Person() { firstName = "Andreas", lastName = "Doe" };
-
-Person mamma = new Person() { firstName = "Jane", lastName = mySelf.lastName };
-Person pappa = new Person() { firstName = "John", lastName = mySelf.lastName };
+Person mySelf = new Person() { firstName = "Andreas", lastName = mother.lastName, Mother = mother, Father = father};
 
 Console.WriteLine($"Person 1's full name is: {mySelf.GetFullName()}");
-
-mySelf.Mother = mamma;
-mySelf.Father = pappa;
 
 Console.WriteLine(mySelf.Mother.GetFullName());
 Console.WriteLine(mySelf.Father.GetFullName());
@@ -175,8 +171,8 @@ class Person
         return $"{this.GetFullName()} {Environment.NewLine} Mother is: {this.Mother.GetFullName()} {Environment.NewLine} Father is: {this.Father.GetFullName()}";
     }
 }
-
 */
+
 /*
 //Exercise 8
 //Private field for Height with method for retreiving and changing value 
