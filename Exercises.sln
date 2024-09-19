@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Indexing", "Exerc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniExercises_DuringClass", "MiniExercises_DuringClass\MiniExercises_DuringClass.csproj", "{8555D51D-128D-4442-A87B-6E067A0463CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Filehandling", "Exercises_Filehandling\Exercises_Filehandling.csproj", "{E454229D-4287-4DBF-A1BA-F78C7A417C4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Filehandling", "Exercises_Filehandling\Exercises_Filehandling.csproj", "{E454229D-4287-4DBF-A1BA-F78C7A417C4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_BasicOOP", "Exercises_BasicOOP\Exercises_BasicOOP.csproj", "{B4396A39-21CA-41A0-B59D-21822ED06AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_BasicOOP", "Exercises_BasicOOP\Exercises_BasicOOP.csproj", "{B4396A39-21CA-41A0-B59D-21822ED06AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Properties", "Exercises_Properties\Exercises_Properties.csproj", "{A429F987-38E0-486C-BA81-B5BBFFA840B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B4396A39-21CA-41A0-B59D-21822ED06AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4396A39-21CA-41A0-B59D-21822ED06AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4396A39-21CA-41A0-B59D-21822ED06AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
