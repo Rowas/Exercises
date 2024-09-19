@@ -351,90 +351,73 @@ class BlueRed
     }
 }
 */
+using Exercises_Properties;
+using System.Net;
 using System.Runtime.CompilerServices;
 
 //Exercise8, 9, 10
 //Car class + static method + simulation
-static int sumOfLength(int[] carLength, string[] carColor)
-{
-    int sumLength = 0;
+//static int sumOfLength(int[] carLength, string[] carColor)
+//{
+//    int sumLength = 0;
 
-    for (int i = 0; i < 1000; i++)
-    {
-        if (carColor[i] == "Green")
-        {
-            sumLength = carLength[i] + sumLength;
-        }
-    }
-    return sumLength;
+//    for (int i = 0; i < 1000; i++)
+//    {
+//        if (carColor[i] == "Green")
+//        {
+//            sumLength = carLength[i] + sumLength;
+//        }
+//    }
+//    return sumLength;
+//}
+
+
+//int[] carLength = new int[1000];
+//string[] carColor = new string[1000];
+
+Car[] cars = new Car[10];
+
+for (int i = 0; i < 10; i++)
+{
+    cars[i] = new Car();          
 }
 
+bool isOneKLess = true;
 
-int[] carLength = new int[1000];
-string[] carColor = new string[1000];
-
-for (int i = 0; i < 1000; i++)
+while (isOneKLess == true)
 {
-
-    Car car = new Car();
-    carLength[i] = car.Length;
-    carColor[i] = car.CarColor;
-}
-
-Console.WriteLine($"Length of all 'Green' cars is: {sumOfLength(carLength, carColor)}");
-
-Car carToDupli = new Car();
-
-Car.carDuplication(carToDupli);
-
-
-class Car
-{
-    private string _carColor = "Default Color";
-    private int _carLength = 4;
-    private int _speed = 150;
-    public int colorNumber;
-    public string CarColor
+    for (int i = 0; i < 10; i++)
     {
-        get
+        Console.Write($"Car {i + 1}: ");
+        if (i < 9)
         {
-            return _carColor;
+            Console.CursorLeft = +8;
         }
-    }
-    public int Length
-    {
-        get
-        {
-            return _carLength;
-        }
-    }
-    public Car()
-    {
-        var randLength = new Random();
-        _carLength = randLength.Next(3, 6);
-        colorNumber = (new Random()).Next(0, 15);
-        Console.ForegroundColor = (ConsoleColor)colorNumber;
-        _carColor = Console.ForegroundColor.ToString();
-        Console.ResetColor();
-        _speed = (new Random()).Next(60, 241);
-    }
-
-    public Car(string carColor)
-    {
-        _carColor = carColor;
-        var randLength = new Random();
-        this._carLength = randLength.Next(3, 6);
-    }
-
-    public static void carDuplication(Car dupliCar)
-    {
+        Console.Write("|");
+        cars[i].GetGraph(cars[i].Distance);
+        Console.Write("|");
+        cars[i].DriveForOneHour(cars[i].Speed);
+        //Console.Write($"Car{i+1} has driven {cars[i].Distance} km.");
         Console.WriteLine();
-        Console.WriteLine($"Car received: \nColor: {dupliCar._carColor}\nLength: {dupliCar._carLength} ");
-        Console.WriteLine();
-        for (int i = 0; i < 10; i++)
+        if (cars[i].Distance >= 1000)
         {
-            Car carDuplicated = new Car(dupliCar.CarColor);
-            Console.WriteLine($"Copy {i+1}: \nColor: {dupliCar._carColor}\nNew Length: {carDuplicated.Length}");
+            Console.WriteLine($"Car {i + 1} has now driven 1000 km or more, ending after this loop");
+            isOneKLess = false;
         }
     }
+    Thread.Sleep(250);
+    Console.Clear();
 }
+
+Console.WriteLine();
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine($"Car {i + 1} drove {cars[i].Distance} km.");
+}
+
+//Console.WriteLine($"Length of all 'Green' cars is: {sumOfLength(carLength, carColor)}");
+
+//Car carToDupli = new Car();
+
+//Car.carDuplication(carToDupli);
