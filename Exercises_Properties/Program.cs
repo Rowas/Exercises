@@ -388,14 +388,17 @@ while (isOneKLess == true)
 {
     for (int i = 0; i < 10; i++)
     {
+        Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
         Console.Write($"Car {i + 1}: ");
+        Console.ResetColor();
         if (i < 9)
         {
             Console.CursorLeft = +8;
         }
         Console.Write("|");
-        cars[i].GetGraph(cars[i].Distance);
+        cars[i].GetGraph(cars[i].Distance, cars[i].colorNumber);
         Console.Write("|");
+        Console.Write($" Car Speed: {cars[i].Speed} km/h");
         cars[i].DriveForOneHour(cars[i].Speed);
         //Console.Write($"Car{i+1} has driven {cars[i].Distance} km.");
         Console.WriteLine();
@@ -405,7 +408,7 @@ while (isOneKLess == true)
             isOneKLess = false;
         }
     }
-    Thread.Sleep(250);
+    Thread.Sleep(1000);
     Console.Clear();
 }
 

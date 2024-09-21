@@ -72,13 +72,15 @@ namespace Exercises_Properties
             this._distance = Speed / 10 + this._distance;
         }
 
-        public void GetGraph(double carDistance)
+        public void GetGraph(double carDistance, int colorNumber)
         {
             for (int i = 0; i < 20; i++)
             {
                 if (carDistance / 50 > i && carDistance / 50 < i + 1)
                 {
+                    Console.ForegroundColor = (ConsoleColor)colorNumber;
                     Console.Write("x");
+                    Console.ResetColor();
                 }
                 else
                 {
