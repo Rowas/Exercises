@@ -406,7 +406,7 @@ while (isOneKLess == true)
         {
             Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
             Console.Write($"Car {i + 1} ");
-            Console.WriteLine($"has now driven 1000 km or more, ending after this loop");
+            Console.Write($"has now driven 1000 km or more, ending after this loop");
             Console.ResetColor();
             isOneKLess = false;
         }

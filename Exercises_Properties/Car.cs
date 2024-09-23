@@ -79,7 +79,7 @@ namespace Exercises_Properties
                 if (carDistance / 50 > i && carDistance / 50 < i + 1)
                 {
                     Console.ForegroundColor = (ConsoleColor)colorNumber;
-                    Console.Write("x");
+                    Console.Write("█");
                     Console.ResetColor();
                 }
                 else
