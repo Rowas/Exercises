@@ -404,7 +404,10 @@ while (isOneKLess == true)
         Console.WriteLine();
         if (cars[i].Distance >= 1000)
         {
-            Console.WriteLine($"Car {i + 1} has now driven 1000 km or more, ending after this loop");
+            Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
+            Console.Write($"Car {i + 1} ");
+            Console.WriteLine($"has now driven 1000 km or more, ending after this loop");
+            Console.ResetColor();
             isOneKLess = false;
         }
     }
@@ -416,7 +419,10 @@ Console.WriteLine();
 
 for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine($"Car {i + 1} drove {cars[i].Distance} km.");
+    Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
+    Console.Write($"Car {i + 1}");
+    Console.ResetColor();
+    Console.WriteLine($" drove {cars[i].Distance} km.");
 }
 
 //Console.WriteLine($"Length of all 'Green' cars is: {sumOfLength(carLength, carColor)}");
