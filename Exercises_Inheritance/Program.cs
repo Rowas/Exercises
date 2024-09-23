@@ -25,3 +25,7 @@ Console.WriteLine();
 Console.WriteLine(new Car(Brands.Toyota, "Yaris", Colors.White));
 
 Console.WriteLine();
+
+Vehicle car4 = new Vehicle(2, 3, 5);
+
+Console.WriteLine($"Length: {car4.size.Length}, Height: {car4.size.Height}, Width: {car4.size.Width}");
