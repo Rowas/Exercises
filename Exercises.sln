@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Filehandling", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_BasicOOP", "Exercises_BasicOOP\Exercises_BasicOOP.csproj", "{B4396A39-21CA-41A0-B59D-21822ED06AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Properties", "Exercises_Properties\Exercises_Properties.csproj", "{A429F987-38E0-486C-BA81-B5BBFFA840B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Properties", "Exercises_Properties\Exercises_Properties.csproj", "{A429F987-38E0-486C-BA81-B5BBFFA840B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Inheritance", "Exercises_Inheritance\Exercises_Inheritance.csproj", "{35F92907-051A-4E4E-B331-B03CAFBF1CBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A429F987-38E0-486C-BA81-B5BBFFA840B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F92907-051A-4E4E-B331-B03CAFBF1CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F92907-051A-4E4E-B331-B03CAFBF1CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F92907-051A-4E4E-B331-B03CAFBF1CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F92907-051A-4E4E-B331-B03CAFBF1CBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
