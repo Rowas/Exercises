@@ -53,7 +53,7 @@ namespace Exercises_Properties
         {
             var randLength = new Random();
             _carLength = randLength.Next(3, 6);
-            colorNumber = (new Random()).Next(0, 15);
+            colorNumber = (new Random()).Next(0, 16);
             Console.ForegroundColor = (ConsoleColor)colorNumber;
             _carColor = Console.ForegroundColor.ToString();
             Console.ResetColor();

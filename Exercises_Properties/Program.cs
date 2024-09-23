@@ -388,7 +388,6 @@ Console.CursorVisible = false;
 
 while (isOneKLess == true)
 {
-    Console.Clear();
     for (int i = 0; i < cars.Length; i++)
     {
         Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
@@ -410,6 +409,7 @@ while (isOneKLess == true)
         }
     }
     Thread.Sleep(1000);
+    Console.Clear();
 }
 
 for (int i = 0; i < cars.Length; i++)
