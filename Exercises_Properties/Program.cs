@@ -377,16 +377,19 @@ using System.Runtime.CompilerServices;
 
 Car[] cars = new Car[10];
 
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < cars.Length; i++)
 {
     cars[i] = new Car();          
 }
 
 bool isOneKLess = true;
 
+Console.CursorVisible = false;
+
 while (isOneKLess == true)
 {
-    for (int i = 0; i < 10; i++)
+    Console.Clear();
+    for (int i = 0; i < cars.Length; i++)
     {
         Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
         Console.Write($"Car {i + 1}: ");
@@ -395,29 +398,21 @@ while (isOneKLess == true)
         {
             Console.CursorLeft = +8;
         }
-        Console.Write("|");
         cars[i].GetGraph(cars[i].Distance, cars[i].colorNumber);
-        Console.Write("|");
-        Console.Write($" Car Speed: {cars[i].Speed} km/h");
         cars[i].DriveForOneHour(cars[i].Speed);
-        //Console.Write($"Car{i+1} has driven {cars[i].Distance} km.");
-        Console.WriteLine();
         if (cars[i].Distance >= 1000)
         {
             Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
             Console.Write($"Car {i + 1} ");
-            Console.Write($"has now driven 1000 km or more, ending after this loop");
+            Console.WriteLine($"has now driven 1000 km or more, ending after this loop");
             Console.ResetColor();
             isOneKLess = false;
         }
     }
     Thread.Sleep(1000);
-    Console.Clear();
 }
 
-Console.WriteLine();
-
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < cars.Length; i++)
 {
     Console.ForegroundColor = (ConsoleColor)cars[i].colorNumber;
     Console.Write($"Car {i + 1}");

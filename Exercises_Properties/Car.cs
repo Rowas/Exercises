@@ -74,6 +74,7 @@ namespace Exercises_Properties
 
         public void GetGraph(double carDistance, int colorNumber)
         {
+            Console.Write("|");
             for (int i = 0; i < 20; i++)
             {
                 if (carDistance / 50 > i && carDistance / 50 < i + 1)
@@ -87,6 +88,9 @@ namespace Exercises_Properties
                     Console.Write("-");
                 }
             }
+            Console.Write("|");
+            Console.Write($" Car Speed: {Speed} km/h");
+            Console.WriteLine();
         }
 
         public static void carDuplication(Car dupliCar)
