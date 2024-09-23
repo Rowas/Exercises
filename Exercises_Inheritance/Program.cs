@@ -1,5 +1,4 @@
-﻿using Exercise_Inheritance;
-using Exercises_Inheritance;
+﻿using Exercises_Inheritance;
 using System.Drawing;
 
 
@@ -24,3 +23,5 @@ Console.WriteLine(new Vehicle(Brands.Toyota, Colors.White));
 Console.WriteLine();
 
 Console.WriteLine(new Car(Brands.Toyota, "Yaris", Colors.White));
+
+Console.WriteLine();

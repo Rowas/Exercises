@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise_Inheritance
+namespace Exercises_Inheritance
 {
     public enum Brands
     {
@@ -23,14 +23,27 @@ namespace Exercise_Inheritance
         Black,
         White
     };
+
+    struct Size
+    {
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public int Length { get; set; }
+        public Size(int width, int height, int length)
+        {
+            Width = width;
+            Height = height;
+            Length = length;
+        }
+    }
+
     internal class Vehicle
     {
         public Brands Brand { get; set; }
         public Colors Color { get; set; }
 
-        public Vehicle(Brands brand, Colors color)
+        public Vehicle(Brands brand, Colors color) : this(brand)
         {
-            Brand = brand;
             Color = color;
         }
 
@@ -38,6 +51,7 @@ namespace Exercise_Inheritance
         {
             Brand = brand;
             Color = Colors.White;
+            Size size = new Size(0, 0, 0);
         }
 
         public override string ToString()
