@@ -30,9 +30,9 @@ namespace Exercises_Inheritance
         public Brands Brand { get; set; }
         public Colors Color { get; set; }
 
-        public Size Size = new Size(RandSize().Item1, RandSize().Item2, RandSize().Item3);
+        public Size Size = new Size(0,0,0);
 
-        public Vehicle(Brands brand, Colors color)
+        public Vehicle(Brands brand, Colors color) : this(brand)
         {
             Brand = brand;
             Color = color;
@@ -42,27 +42,19 @@ namespace Exercises_Inheritance
         {
             Brand = brand;
             Color = Colors.White;
+
+            var rand = new Random();
+
+            var randLength = rand.NextDouble() + rand.Next(2, 4);
+            var randWidth = rand.NextDouble() + rand.Next(1, 3);
+            var randHeight = rand.NextDouble() + rand.Next(1, 2);
+            Size = new Size(randLength, randWidth, randHeight);
         }
 
         public override string ToString()
         {
             return $"A {this.Color} {this.Brand}";
         }
-        
-        static public (double, double, double) RandSize()
-        {
-            var rand = new Random();
-
-            var randLength = rand.NextDouble() + rand.Next(2, 4);
-            var randWidth = rand.NextDouble() + rand.Next(1, 3);
-            var randHeight = rand.NextDouble() + rand.Next(1, 2);
-            var size = new Size(randLength, randWidth, randHeight);
-
-            return (randLength, randWidth, randHeight);
-        }
-
-
-
     }
 
     internal class Car : Vehicle
