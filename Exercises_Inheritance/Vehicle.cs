@@ -18,9 +18,9 @@ namespace Exercises_Inheritance
 
         public Size(double length, double width, double height)
         {
-            Length = length;
-            Width = width;
-            Height = height;
+            this.Length = length;
+            this.Width = width;
+            this.Height = height;
         }
     }
 
@@ -30,9 +30,7 @@ namespace Exercises_Inheritance
         public Brands Brand { get; set; }
         public Colors Color { get; set; }
 
-        public Size Size = new Size(0, 0, 0);
-
-        //Size size2 = new Size(RandSize().Item1, RandSize().Item2, RandSize().Item3)
+        public Size Size = new Size(RandSize().Item1, RandSize().Item2, RandSize().Item3);
 
         public Vehicle(Brands brand, Colors color)
         {
@@ -44,7 +42,6 @@ namespace Exercises_Inheritance
         {
             Brand = brand;
             Color = Colors.White;
-            Size size1 = new Size(RandSize().Item1, RandSize().Item2, RandSize().Item3);
         }
 
         public override string ToString()
@@ -52,7 +49,7 @@ namespace Exercises_Inheritance
             return $"A {this.Color} {this.Brand}";
         }
         
-        public (double, double, double) RandSize()
+        static public (double, double, double) RandSize()
         {
             var rand = new Random();
 
@@ -79,7 +76,7 @@ namespace Exercises_Inheritance
 
         public override string ToString()
         {
-            return $"A {this.Color} {Model} from {this.Brand}";
+            return $"A {this.Color} {this.Size.Length:f1} meter long {Model} from {this.Brand}";
         }
     }
 
