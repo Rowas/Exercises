@@ -24,7 +24,21 @@ Console.WriteLine($"Car1 is of the following size:\nLength: {vehicle1.Size.Lengt
 
 // Exercise 6 through 12
 
-var circle = new Circle(5);
-Console.WriteLine(circle);
-Console.WriteLine($"Area: {circle.Area:f2}");
-Console.WriteLine($"Circumference: {circle.Circumference:f2}");
+//var circle = new Circle(5);
+//Console.WriteLine(circle);
+//Console.WriteLine($"Area: {circle.Area:f2}");
+//Console.WriteLine($"Circumference: {circle.Circumference:f2}");
+
+//Console.WriteLine();
+
+//var square = new Square(5);
+//Console.WriteLine(square);
+//Console.WriteLine($"Area: {square.Area:f2}");
+//Console.WriteLine($"Circumference: {square.Circumference:f2}");
+
+
+var square = new Square(3.2);
+square.Print();
+
+var circle = new Circle(4.5);
+circle.Print();
