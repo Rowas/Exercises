@@ -28,7 +28,7 @@ namespace Exercises_Inheritance
     {
 
         public Brands Brand { get; set; }
-        public Colors Color { get; set; }
+        public Colors Color { get; set; } = Colors.White;
 
         public Size Size = new Size(0,0,0);
 
@@ -41,7 +41,6 @@ namespace Exercises_Inheritance
         public Vehicle(Brands brand)
         {
             Brand = brand;
-            Color = Colors.White;
 
             var rand = new Random();
 

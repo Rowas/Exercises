@@ -85,7 +85,7 @@ namespace Exercises_Properties
                 }
                 else
                 {
-                    Console.Write("-");
+                    Console.Write("_");
                 }
             }
             Console.Write("|");
