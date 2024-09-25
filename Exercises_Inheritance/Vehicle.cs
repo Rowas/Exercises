@@ -30,29 +30,44 @@ namespace Exercises_Inheritance
         public Brands Brand { get; set; }
         public Colors Color { get; set; } = Colors.White;
 
-        public Size Size = new Size(0,0,0);
+        //public Size Size = new Size(0,0,0);
 
-        public Vehicle(Brands brand, Colors color) : this(brand)
-        {
-            Brand = brand;
-            Color = color;
-        }
+        public Size Size { get; set; }
 
-        public Vehicle(Brands brand)
+        public Vehicle(Brands brand, Colors color)
         {
-            Brand = brand;
+            this.Brand = brand;
+            this.Color = color;
 
             var rand = new Random();
 
-            var randLength = rand.NextDouble() + rand.Next(2, 4);
-            var randWidth = rand.NextDouble() + rand.Next(1, 3);
-            var randHeight = rand.NextDouble() + rand.Next(1, 2);
-            Size = new Size(randLength, randWidth, randHeight);
+            Size size = new Size();
+            size.Length = rand.NextDouble() * 2 + 3.5;
+            size.Width = rand.NextDouble() * 0.7 + 1.5;
+            size.Height = rand.NextDouble() * 2 + 1;
+            Size = size;
+        }
+
+        public Vehicle(Brands brand) : this(brand, Colors.White)
+        {
+            this.Brand = brand;
+
+            //var rand = new Random();
+
+            //var randLength = rand.NextDouble() + rand.Next(2, 4);
+            //var randWidth = rand.NextDouble() + rand.Next(1, 3);
+            //var randHeight = rand.NextDouble() + rand.Next(1, 2);
+            //this.Size = new Size(randLength, randWidth, randHeight);
+        }
+
+        public Vehicle() : this(Brands.Toyota, Colors.White)
+        {
+
         }
 
         public override string ToString()
         {
-            return $"A {this.Color} {this.Brand}";
+            return $"A {this.Color.ToString().ToLower()} {this.Brand}";
         }
     }
 
@@ -67,7 +82,7 @@ namespace Exercises_Inheritance
 
         public override string ToString()
         {
-            return $"A {this.Color} {this.Size.Length:f1} meter long {Model} from {this.Brand}";
+            return $"A {this.Color.ToString().ToLower()} {this.Size.Length:f1} meter long {Model} from {this.Brand}";
         }
     }
 
