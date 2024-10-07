@@ -503,7 +503,7 @@ static void Exercise12()
 Exercise12();
 */
 
-/*
+
 //Move @ in a box using function from previous Exercise
 //Hard coding box size of 25x25
 
@@ -557,9 +557,9 @@ static void Exercise13()
 
     DrawBox(25, 25);
 
-   
 
-    static void MoveMent()
+
+    static void Movement()
     {
         Console.SetCursorPosition(0, 26);
         ConsoleKeyInfo checkKey;
@@ -626,8 +626,8 @@ static void Exercise13()
     Console.SetCursorPosition(12, 12);
     Console.Write("@");
 
-    MoveMent();
+    Movement();
 }
 Exercise13();
-*/
+
 
