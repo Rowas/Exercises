@@ -406,7 +406,7 @@ static void Exercise12()
 Exercise12();
 */
 
-/*
+
 //Number of primes up to a user requested amount
 static void Exercise13()
 {
@@ -419,28 +419,31 @@ static void Exercise13()
 
     do
     {
-        bool isPrime = true;
-        for (decimal i = 2; i < checkedNum; i++)
+        Task PrimeCalc = Task.Run(() =>
         {
-            if (checkedNum % i == 0)
+            bool isPrime = true;
+            for (decimal i = 2; i < checkedNum; i++)
             {
-                isPrime = false;
-                break;
+                if (checkedNum % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
             }
-        }
-        if (isPrime)
-        {
-            primeNumber++;
-            if (primeNumber % 1000 == 0)
+            if (isPrime)
             {
-                Console.WriteLine($"Prime number {primeNumber} is {checkedNum}");
+                primeNumber++;
+                if (primeNumber % 1000 == 0)
+                {
+                    Console.WriteLine($"Prime number {primeNumber} is {checkedNum}");
+                }
             }
-        }
-        checkedNum++;
+            checkedNum++;
+        });
     } while (primeNumber != RequestPrimes);
 }
 Exercise13();
-*/
+
 
 /*
 //Game - Guess the number
