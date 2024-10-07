@@ -503,7 +503,7 @@ static void Exercise12()
 Exercise12();
 */
 
-/*
+
 //Move @ in a box using function from previous Exercise
 //Hard coding box size of 25x25
 
@@ -557,7 +557,7 @@ static void Exercise13()
 
     DrawBox(25, 25);
 
-   
+
 
     static void MoveMent()
     {
@@ -629,5 +629,5 @@ static void Exercise13()
     MoveMent();
 }
 Exercise13();
-*/
+
 

@@ -47,3 +47,55 @@ class Cat
 }
 */
 
+
+//Action<int, int> addition = Add;
+
+//addition(5, 6);
+
+//static void Add(int a, int b)
+//{
+//    Console.WriteLine(a + b);
+//}
+
+
+//Func<char, int, string> repeatChar = PrintAdd;
+
+//Console.WriteLine(repeatChar('a', 5));
+
+//static string PrintAdd(char a, int b)
+//{
+//    return new string(a, b);
+//}
+
+//Console.WriteLine("Hello, World!".Encapsulate1("***"));
+
+//Console.WriteLine("Hello, World!".Encapsulate2("<<", ">>"));
+
+//static class StringExtensions
+//{
+//    public static string Encapsulate1(this string s, string EncapString)
+//    {
+//        return EncapString + s + EncapString;
+//    }
+
+//    public static string Encapsulate2(this string s, string prefix, string suffix)
+//    {
+//        return prefix + s + suffix;
+//    }
+//}
+
+//var list = Enumerable
+//    .Range(0, 50)
+//    .AsParallel()
+//    .Select(i => CostlyOperation(i))
+//    .ToList();
+//Console.WriteLine("\nProcessing Complete! Here is the processed data:\n");
+//list.ForEach(i => Console.WriteLine(i));
+
+//static int CostlyOperation(int n)
+//{
+//    for (int i = 0; i < 1000_000; i++)
+//    Console.WriteLine($"Processing element {n}");
+//    return n;
+//}
+
