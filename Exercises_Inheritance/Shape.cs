@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercises_Inheritance
+﻿namespace Exercises_Inheritance
 {
     public abstract class Shape
     {
@@ -70,7 +63,7 @@ namespace Exercises_Inheritance
             return $"Circle with radius {Radius}";
         }
 
-        
+
     }
 
     public class Square : Shape

@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using System.IO;
 
 string directory = Path.Combine("D:", "School_Files");
@@ -58,3 +58,4 @@ catch (System.IO.FileNotFoundException)
 {
     Console.WriteLine("File not found.");
 }
+*/

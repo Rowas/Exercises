@@ -1,7 +1,4 @@
-﻿using Exercises_Inheritance;
-using System.Drawing;
-
-
+﻿
 // Exercise 1 through 5
 // Car and Vehicle classes
 
