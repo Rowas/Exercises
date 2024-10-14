@@ -559,7 +559,7 @@ static void Exercise13()
 
 
 
-    static void MoveMent()
+    static void Movement()
     {
         Console.SetCursorPosition(0, 26);
         ConsoleKeyInfo checkKey;
@@ -626,7 +626,7 @@ static void Exercise13()
     Console.SetCursorPosition(12, 12);
     Console.Write("@");
 
-    MoveMent();
+    Movement();
 }
 Exercise13();
 
