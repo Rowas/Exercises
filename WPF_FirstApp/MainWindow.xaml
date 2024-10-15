@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_FirstApp"
         mc:Ignorable="d"
-        Title="XAML-Exercices" Height="450" Width="800">
+        Title="XAML-Exercices" Height="400" Width="500">
     <Grid Margin="2,0,-2,0">
         <Grid.ShowGridLines>False</Grid.ShowGridLines>
         <!--<Button Height="auto" Width="auto" Content="Button" 
@@ -71,7 +71,7 @@
 
 
 
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -135,6 +135,47 @@
                 <Button.Height>25</Button.Height>
                 <Button.Content>OK</Button.Content>
             </Button>
+        </StackPanel>-->
+
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+            <Grid.Column>0</Grid.Column>
+            <Label Margin="10,10,0,0">Students:</Label>
+            <ListBox x:Name="studentBox">
+                <ListBox.Margin>10</ListBox.Margin>
+                <ListBox.Width>200</ListBox.Width>
+                <ListBox.Height>300</ListBox.Height>
+                <ListBox.HorizontalAlignment>Left</ListBox.HorizontalAlignment>
+                <ListBox.VerticalAlignment>Stretch</ListBox.VerticalAlignment>
+            </ListBox>
         </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="center" VerticalAlignment="Center">
+            <Grid.Column>1</Grid.Column>
+            <Label>Firstname:</Label>
+            <TextBox x:Name="firstName">
+                <TextBox.Width>150</TextBox.Width>
+                <TextBox.Height>20</TextBox.Height>
+            </TextBox>
+            <Label>Lastname:</Label>
+            <TextBox x:Name="lastName">
+                <TextBox.Width>150</TextBox.Width>
+                <TextBox.Height>20</TextBox.Height>
+            </TextBox>
+            <Label>Email:</Label>
+            <TextBox x:Name="mailBox">
+                <TextBox.Width>150</TextBox.Width>
+                <TextBox.Height>20</TextBox.Height>
+            </TextBox>
+            <Button x:Name="confirmButton" Click="ConfirmButton_Click">
+                <Button.Margin>10</Button.Margin>
+                <Button.Width>60</Button.Width>
+                OK
+            </Button>
+        </StackPanel>-->
+        
+        
     </Grid>
 </Window>
