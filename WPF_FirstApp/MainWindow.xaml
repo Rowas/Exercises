@@ -175,7 +175,63 @@
                 OK
             </Button>
         </StackPanel>-->
+
+        <!--<WrapPanel x:Name="wrapPanel"
+                   Orientation="Vertical"
+                   VerticalAlignment="Top">
+            
+            <Label x:Name="lableToChange"
+                   Content="Example Lable"
+                   Margin="10,10,0,0" />
+
+            <Button x:Name="ChangeButton"
+                    Content="Change Lable"
+                    Width="100"
+                    VerticalAlignment="Center"
+                    Margin="10,10,0,0" 
+                    Click="Button_Click" 
+                    IsEnabled="False"/>
+            
+            <TextBox x:Name="NewLable"
+                     Text="Sample Text"
+                     Margin="10,10,0,0" 
+                     KeyDown="NewLable_KeyDown"/>
+            
+            <TextBox x:Name="NewLable2"
+                     Text="Create"
+                     Margin="10,10,0,10"
+                     TextChanged="NewLable2_TextChanged"/>
+            <CheckBox x:Name="DisableButton"
+                      Content="Button Enabled"
+                      IsChecked="False"
+                      Checked="DisableButton_Checked"
+                      Unchecked="DisableButton_Checked"/>
+
+            <ComboBox x:Name="comboBox"
+                      SelectedIndex="0"
+                      Margin="10,10,10,0">
+                <ComboBoxItem>English</ComboBoxItem>
+                <ComboBoxItem>Svenska</ComboBoxItem>
+                
+            </ComboBox>
+
+            <ListBox HorizontalAlignment="Center" Margin="10">
+                <ListBoxItem>Sweden</ListBoxItem>
+                <ListBoxItem>Norway</ListBoxItem>
+                <ListBoxItem>Denmark</ListBoxItem>
+                <ListBoxItem>Finland</ListBoxItem>
+            </ListBox>
+        </WrapPanel>-->
         
-        
+        <!--<Button x:Name="ClickButton" 
+                Content="Clicks: 0"
+                Width="75"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                Click="ClickButton_Click"/>-->
+
+        <Button x:Name="Increase"/>
+        <Button x:Name="Decrease"/>
+
     </Grid>
 </Window>
