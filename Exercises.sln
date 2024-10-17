@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Properties", "Exe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Inheritance", "Exercises_Inheritance\Exercises_Inheritance.csproj", "{35F92907-051A-4E4E-B331-B03CAFBF1CBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Delegate", "Exercises_Delegate\Exercises_Delegate.csproj", "{DE9F68EC-9B15-46D6-ADB2-9FA6F782F7E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises_Delegate", "Exercises_Delegate\Exercises_Delegate.csproj", "{DE9F68EC-9B15-46D6-ADB2-9FA6F782F7E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_FirstApp", "WPF_FirstApp\WPF_FirstApp.csproj", "{3E689385-0910-4904-9D0C-BA3625EAC7A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_FirstApp", "WPF_FirstApp\WPF_FirstApp.csproj", "{3E689385-0910-4904-9D0C-BA3625EAC7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_DiagBoxes", "Exercises_DiagBoxes\Exercises_DiagBoxes.csproj", "{1E79A1A4-6535-4719-BDF8-7EED51A96FE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{3E689385-0910-4904-9D0C-BA3625EAC7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E689385-0910-4904-9D0C-BA3625EAC7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E689385-0910-4904-9D0C-BA3625EAC7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E79A1A4-6535-4719-BDF8-7EED51A96FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E79A1A4-6535-4719-BDF8-7EED51A96FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E79A1A4-6535-4719-BDF8-7EED51A96FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E79A1A4-6535-4719-BDF8-7EED51A96FE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

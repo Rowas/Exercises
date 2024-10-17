@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics.Metrics;
+using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -13,9 +15,32 @@ namespace WPF_FirstApp
         //int studentIndex = 0;
 
         int clicks = 0;
+        int counter = 5;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Increase_Click(object sender, RoutedEventArgs e)
+        {
+            counter++;
+            if (counter >= 9) { counter = 9; }
+            Counter.Content = counter;
+            slider.Value = counter;
+        }
+
+        private void Decrease_Click(object sender, RoutedEventArgs e)
+        {
+            counter--;
+            if (counter <= 0) { counter = 0; }
+            Counter.Content = counter;
+            slider.Value = counter;
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            counter = (int)slider.Value;
+            Counter.Content = counter;
         }
 
 

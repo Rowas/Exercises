@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_FirstApp"
         mc:Ignorable="d"
         Title="XAML-Exercices" Height="400" Width="500">
-    <Grid Margin="2,0,-2,0">
+    <Grid>
         <Grid.ShowGridLines>False</Grid.ShowGridLines>
         <!--<Button Height="auto" Width="auto" Content="Button" 
                 x:Name = "testButton" HorizontalAlignment="Center"
@@ -229,9 +229,15 @@
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
                 Click="ClickButton_Click"/>-->
-
-        <Button x:Name="Increase"/>
-        <Button x:Name="Decrease"/>
-
+        <WrapPanel Orientation="Vertical" VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            <Label x:Name="Counter"
+                   HorizontalAlignment="Center"
+                   Content="5"
+               />
+            <Button x:Name="Increase" Content="Increase" Click="Increase_Click"/>
+            <Button x:Name="Decrease" Content="Decrease" Click="Decrease_Click"/>
+            <Slider x:Name="slider" Width="100" Minimum="0" Maximum="9" Value="5" ValueChanged="slider_ValueChanged"/>
+        </WrapPanel>
     </Grid>
 </Window>
